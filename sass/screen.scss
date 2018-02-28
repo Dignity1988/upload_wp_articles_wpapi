@@ -60,7 +60,7 @@ $colors:$basefont, $linkcolor, $basedarkblue, $greycolor;
 /*--1.4 end-colors*/
 /*--1.4 responsive typography*/
 /*--1.7 sticky footer--*/
-@include sticky-footer(72px, "#main", "#prefooter", "#footer");
+@include sticky-footer(72px);
 /*end sticky footer*/
 /* An attempt to set adaptive fontsizes for different size media queries are not set*/
 $large:5000px;/*extra large*/
@@ -84,13 +84,14 @@ $fontsize:($basefont + ( 1 / $i));//there is very poor assumption that scaling i
 }
 /*end responsive typography*/
 /*2. Responsive grid*/
+.grid-reponsive__column{display:inline-block;box-sizing: content-box};/*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
 @media screen and (min-width:1200px){
 .container{width:1140px;}
-.grid-reponsive{display:inline-block;width:1140px;
+.grid-reponsive{display:inline-block;width:1140px;}
 .grid-reponsive__row {display:inline-block;width:auto;}
-}
-.grid-reponsive__column{display:inline-block;box-sizing: content-box;/*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
-.grid-reponsive__column_{width:60px;padding:0 10px;}
+
+
+.grid-reponsive__column_col1{width:60px;padding:0 10px;}
 .grid-reponsive__column__col2{width:120px;}
 .grid-reponsive__column__col3{width:180px;}
 .grid-reponsive__column__col4{width:240px;}
@@ -106,13 +107,12 @@ $fontsize:($basefont + ( 1 / $i));//there is very poor assumption that scaling i
 .grid-reponsive__column__col14{width:840px;}
 .grid-reponsive__column__col15{width:900px;}
 }
-}
+
 /*tablet resolution*/
 @media screen and (min-width:768px) and (max-width:1200px){
-  .grid-reponsive__colum__col1{
-    .grid-reponsive__column{display:inline-block;box-sizing: content-box;/*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
-    .grid-reponsive__column_{width:60px;padding:0 10px;}
-    .grid-reponsive__column__col2{width:38,4px;}
+
+    .grid-reponsive__column_col1{width:60px;padding:0 10px;}
+    .grid-reponsive__column__col2{width:38.4px;}
     .grid-reponsive__column__col3{width:180px;}
     .grid-reponsive__column__col4{width:240px;}
     .grid-reponsive__column__col5{width:300px;}
@@ -126,13 +126,11 @@ $fontsize:($basefont + ( 1 / $i));//there is very poor assumption that scaling i
     .grid-reponsive__column__col13{width:780px;}
     .grid-reponsive__column__col14{width:840px;}
     .grid-reponsive__column__col15{width:900px;}
-  }
-}
+
+
 }
 /*mobile device column grid and height*/
-@media screen and (max-width:768px){
-  .grid-reponsive__colum__col1{
-    .grid-reponsive__column{display:inline-block;box-sizing: content-box;/*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
+@media screen and (min-width:0px) and (max-width:768px){
     .grid-reponsive__column__col1{width:60px;padding:0 6.4px;}
     .grid-reponsive__column__col2{width:76.8px;}
     .grid-reponsive__column__col3{width:115.2px;}
@@ -149,6 +147,5 @@ $fontsize:($basefont + ( 1 / $i));//there is very poor assumption that scaling i
     .grid-reponsive__column__col14{width:537.6px;}
     .grid-reponsive__column__col15{width:576px;}
   }
-}
-}
+
 /*7 Footer*/
