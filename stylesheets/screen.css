@@ -38,7 +38,7 @@
 /*end table of context*/
 /*--1.1 css reset*/
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-/* line 5, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -60,45 +60,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -112,25 +112,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /*--1.4 end-colors*/
 /*--1.4 responsive typography*/
 /*--1.7 sticky footer--*/
-/* line 10, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 10, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
 html, body {
   height: 100%;
 }
 
-/* line 12, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
-#main {
+/* line 12, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+#root {
   clear: both;
   min-height: 100%;
   height: auto !important;
   height: 100%;
   margin-bottom: -72px;
 }
-/* line 18, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
-#main #prefooter {
+/* line 18, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+#root #root_footer {
   height: 72px;
 }
 
-/* line 20, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 20, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
 #footer {
   clear: both;
   position: relative;
@@ -142,136 +142,164 @@ html, body {
 /*extra large*/
 /* 2rem is the constantfound in common practives value that please use another value than 2 for code below to change sizes of fonts. Ths will be recalculated to $variable further. The h1 2rem is the highest value*/
 @media screen and (max-width: 5000px) {
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h1 {
     font-size: calc( 3rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h2 {
     font-size: calc( 2.5rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h3 {
     font-size: calc( 2.33333rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h4 {
     font-size: calc( 2.25rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h5 {
     font-size: calc( 2.2rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h6 {
     font-size: calc( 2.16667rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   p {
     font-size: calc( 2.14286rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 }
 @media screen and (max-width: 1112px) {
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h1 {
     font-size: calc( 3rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h2 {
     font-size: calc( 2.5rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h3 {
     font-size: calc( 2.33333rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h4 {
     font-size: calc( 2.25rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h5 {
     font-size: calc( 2.2rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h6 {
     font-size: calc( 2.16667rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   p {
     font-size: calc( 2.14286rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h1 {
     font-size: calc( 3rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h2 {
     font-size: calc( 2.5rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h3 {
     font-size: calc( 2.33333rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h4 {
     font-size: calc( 2.25rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h5 {
     font-size: calc( 2.2rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   h6 {
     font-size: calc( 2.16667rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   p {
     font-size: calc( 2.14286rem);
     font-weight: 100;
+    font-family: "Roboto";
   }
 }
 /*end responsive typography*/
 /*2. Responsive grid*/
+/* line 87, ../sass/screen.scss */
+.grid-reponsive__column {
+  display: inline-block;
+  box-sizing: content-box;
+}
+
+/*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
 @media screen and (min-width: 1200px) {
   /* line 89, ../sass/screen.scss */
   .container {
@@ -283,217 +311,242 @@ html, body {
     display: inline-block;
     width: 1140px;
   }
+
   /* line 91, ../sass/screen.scss */
-  .grid-reponsive .grid-reponsive__row {
+  .grid-reponsive__row {
     display: inline-block;
     width: auto;
   }
 
-  /* line 93, ../sass/screen.scss */
-  .grid-reponsive__column {
-    display: inline-block;
-    box-sizing: content-box;
-    /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
-  }
   /* line 94, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1 {
+  .grid-reponsive__column_col1 {
     width: 60px;
     padding: 0 10px;
   }
+
   /* line 95, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col2 {
+  .grid-reponsive__column__col2 {
     width: 120px;
   }
+
   /* line 96, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col3 {
+  .grid-reponsive__column__col3 {
     width: 180px;
   }
+
   /* line 97, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col4 {
+  .grid-reponsive__column__col4 {
     width: 240px;
   }
+
   /* line 98, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col5 {
+  .grid-reponsive__column__col5 {
     width: 300px;
   }
+
   /* line 99, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col6 {
+  .grid-reponsive__column__col6 {
     width: 360px;
   }
+
   /* line 100, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col7 {
+  .grid-reponsive__column__col7 {
     width: 420px;
   }
+
   /* line 101, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col8 {
+  .grid-reponsive__column__col8 {
     width: 480px;
   }
+
   /* line 102, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col9 {
+  .grid-reponsive__column__col9 {
     width: 540px;
   }
+
   /* line 103, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col10 {
+  .grid-reponsive__column__col10 {
     width: 600px;
   }
+
   /* line 104, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col11 {
+  .grid-reponsive__column__col11 {
     width: 660px;
   }
+
   /* line 105, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col12 {
+  .grid-reponsive__column__col12 {
     width: 720px;
   }
+
   /* line 106, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col13 {
+  .grid-reponsive__column__col13 {
     width: 780px;
   }
+
   /* line 107, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col14 {
+  .grid-reponsive__column__col14 {
     width: 840px;
   }
+
   /* line 108, ../sass/screen.scss */
-  .grid-reponsive__column .grid-reponsive__column__col1_col15 {
+  .grid-reponsive__column__col15 {
     width: 900px;
   }
 }
 /*tablet resolution*/
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   /* line 114, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column {
-    display: inline-block;
-    box-sizing: content-box;
-    /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
-  }
-  /* line 115, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1 {
+  .grid-reponsive__column_col1 {
     width: 60px;
     padding: 0 10px;
   }
-  /* line 116, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col2 {
-    width: 38,4px;
+
+  /* line 115, ../sass/screen.scss */
+  .grid-reponsive__column__col2 {
+    width: 38.4px;
   }
-  /* line 117, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col3 {
+
+  /* line 116, ../sass/screen.scss */
+  .grid-reponsive__column__col3 {
     width: 180px;
   }
-  /* line 118, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col4 {
+
+  /* line 117, ../sass/screen.scss */
+  .grid-reponsive__column__col4 {
     width: 240px;
   }
-  /* line 119, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col5 {
+
+  /* line 118, ../sass/screen.scss */
+  .grid-reponsive__column__col5 {
     width: 300px;
   }
-  /* line 120, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col6 {
+
+  /* line 119, ../sass/screen.scss */
+  .grid-reponsive__column__col6 {
     width: 360px;
   }
-  /* line 121, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col7 {
+
+  /* line 120, ../sass/screen.scss */
+  .grid-reponsive__column__col7 {
     width: 420px;
   }
-  /* line 122, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col8 {
+
+  /* line 121, ../sass/screen.scss */
+  .grid-reponsive__column__col8 {
     width: 480px;
   }
-  /* line 123, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col9 {
+
+  /* line 122, ../sass/screen.scss */
+  .grid-reponsive__column__col9 {
     width: 540px;
   }
-  /* line 124, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col10 {
+
+  /* line 123, ../sass/screen.scss */
+  .grid-reponsive__column__col10 {
     width: 600px;
   }
-  /* line 125, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col11 {
+
+  /* line 124, ../sass/screen.scss */
+  .grid-reponsive__column__col11 {
     width: 660px;
   }
-  /* line 126, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col12 {
+
+  /* line 125, ../sass/screen.scss */
+  .grid-reponsive__column__col12 {
     width: 720px;
   }
-  /* line 127, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col13 {
+
+  /* line 126, ../sass/screen.scss */
+  .grid-reponsive__column__col13 {
     width: 780px;
   }
-  /* line 128, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col14 {
+
+  /* line 127, ../sass/screen.scss */
+  .grid-reponsive__column__col14 {
     width: 840px;
   }
-  /* line 129, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col15 {
+
+  /* line 128, ../sass/screen.scss */
+  .grid-reponsive__column__col15 {
     width: 900px;
   }
 }
 /*mobile device column grid and height*/
-@media screen and (max-width: 768px) {
-  /* line 136, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column {
-    display: inline-block;
-    box-sizing: content-box;
-    /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
-  }
-  /* line 137, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1 {
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  /* line 134, ../sass/screen.scss */
+  .grid-reponsive__column__col1 {
     width: 60px;
     padding: 0 6.4px;
   }
-  /* line 138, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col2 {
+
+  /* line 135, ../sass/screen.scss */
+  .grid-reponsive__column__col2 {
     width: 76.8px;
   }
-  /* line 139, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col3 {
+
+  /* line 136, ../sass/screen.scss */
+  .grid-reponsive__column__col3 {
     width: 115.2px;
   }
-  /* line 140, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col4 {
+
+  /* line 137, ../sass/screen.scss */
+  .grid-reponsive__column__col4 {
     width: 153.6px;
   }
-  /* line 141, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col5 {
+
+  /* line 138, ../sass/screen.scss */
+  .grid-reponsive__column__col5 {
     width: 192px;
   }
-  /* line 142, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col6 {
+
+  /* line 139, ../sass/screen.scss */
+  .grid-reponsive__column__col6 {
     width: 230.4px;
   }
-  /* line 143, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col7 {
+
+  /* line 140, ../sass/screen.scss */
+  .grid-reponsive__column__col7 {
     width: 268.8px;
   }
-  /* line 144, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col8 {
+
+  /* line 141, ../sass/screen.scss */
+  .grid-reponsive__column__col8 {
     width: 307.2px;
   }
-  /* line 145, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col9 {
+
+  /* line 142, ../sass/screen.scss */
+  .grid-reponsive__column__col9 {
     width: 345.6px;
   }
-  /* line 146, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col10 {
+
+  /* line 143, ../sass/screen.scss */
+  .grid-reponsive__column__col10 {
     width: 384px;
   }
-  /* line 147, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col11 {
+
+  /* line 144, ../sass/screen.scss */
+  .grid-reponsive__column__col11 {
     width: 422.4px;
   }
-  /* line 148, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col12 {
+
+  /* line 145, ../sass/screen.scss */
+  .grid-reponsive__column__col12 {
     width: 460.8px;
   }
-  /* line 149, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col13 {
+
+  /* line 146, ../sass/screen.scss */
+  .grid-reponsive__column__col13 {
     width: 499.2px;
   }
-  /* line 150, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col14 {
+
+  /* line 147, ../sass/screen.scss */
+  .grid-reponsive__column__col14 {
     width: 537.6px;
   }
-  /* line 151, ../sass/screen.scss */
-  .grid-reponsive__colum__col1 .grid-reponsive__column .grid-reponsive__column__col1_col15 {
+
+  /* line 148, ../sass/screen.scss */
+  .grid-reponsive__column__col15 {
     width: 576px;
   }
 }
