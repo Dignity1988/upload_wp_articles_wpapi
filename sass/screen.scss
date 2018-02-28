@@ -1,0 +1,154 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+
+/*table of context/
+1. Mixins and functions
+--1.1 Css reset
+--1.2 Cleafix
+--1.3 fonts
+--1.4 colors
+--1.5 responsive typografy
+--1.6 crossbrowser prefixer
+--1.7 responsive fonts for devices
+--1.8 sticky footer
+--1.9
+2. Responsive grid
+--2.1 Media queries mixins and functions
+--2.2 Container, columns, rows and sections, amin and aside and footer main styles
+--2.3 Header styles
+--2.4 Single block styles
+3.Aside styles
+--3.1 Aside elements
+--3.2 Aside colors and blocks
+--4.1 Menu styles
+5. Menus
+--5.1 Main menu styles
+--5.2 Social menus
+--5.3 Lists styles
+6. Slider
+--6.1 Slider images
+--6.2 Slider style
+7. Footer
+--7.1 footer blocks
+--7.2 footer elements and plugins
+8. Extra styles for inputs groups
+--8.1 Input form
+--8.2 Input group
+/*end table of context*/
+
+
+/*--1.1 css reset*/
+@import "compass/reset";
+/*end css-reset*/
+/* 1.2 clearfix and sticky-footer*/
+@import "compass/utilities/general/clearfix";
+@import "compass/layout/sticky-footer";
+/* --1.1 end clearfix*/
+/* --1.2 fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* --1.2 end fonts */
+/*--1.3 colors */
+$basefont: rgb(0,0,0);
+$linkcolor: rgb(44,66,90);
+$basedarkblue:rgb(44,66,90);
+$greycolor:rgb(142, 147, 153);
+$colors:$basefont, $linkcolor, $basedarkblue, $greycolor;
+/*--1.4 end-colors*/
+/*--1.4 responsive typography*/
+/*--1.7 sticky footer--*/
+@include sticky-footer(72px, "#main", "#prefooter", "#footer");
+/*end sticky footer*/
+/* An attempt to set adaptive fontsizes for different size media queries are not set*/
+$large:5000px;/*extra large*/
+$tablet:1112px;
+$mobile:768px;
+$media:$large, $tablet, $mobile;
+$l:1; $i:1;
+$basefont:2rem;
+$typography:h1, h2, h3, h4, h5, h6, p;
+/* 2rem is the constantfound in common practives value that please use another value than 2 for code below to change sizes of fonts. Ths will be recalculated to $variable further. The h1 2rem is the highest value*/
+@for $l from 1 through 3{
+$previousscreen:nth($media, $l);
+$screen:nth($media, $l);
+@media screen and (max-width:#{$screen})  {
+@for $i from 1 through length($typography) {
+$index:nth($typography, $i);
+$fontsize:($basefont + ( 1 / $i));//there is very poor assumption that scaling is not similara to stackoverflow pentatonic metaphor of music scaling but simple linera counting with proportion/
+#{$index}{font-size:calc( #{$fontsize});font-weight:100;font-family:"Roboto";}
+}
+}
+}
+/*end responsive typography*/
+/*2. Responsive grid*/
+@media screen and (min-width:1200px){
+.container{width:1140px;}
+.grid-reponsive{display:inline-block;width:1140px;
+.grid-reponsive__row {display:inline-block;width:auto;}
+}
+.grid-reponsive__column{display:inline-block;box-sizing: content-box;/*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
+.grid-reponsive__column_{width:60px;padding:0 10px;}
+.grid-reponsive__column__col2{width:120px;}
+.grid-reponsive__column__col3{width:180px;}
+.grid-reponsive__column__col4{width:240px;}
+.grid-reponsive__column__col5{width:300px;}
+.grid-reponsive__column__col6{width:360px;}
+.grid-reponsive__column__col7{width:420px;}
+.grid-reponsive__column__col8{width:480px;}
+.grid-reponsive__column__col9{width:540px;}
+.grid-reponsive__column__col10{width:600px;}
+.grid-reponsive__column__col11{width:660px;}
+.grid-reponsive__column__col12{width:720px;}
+.grid-reponsive__column__col13{width:780px;}
+.grid-reponsive__column__col14{width:840px;}
+.grid-reponsive__column__col15{width:900px;}
+}
+}
+/*tablet resolution*/
+@media screen and (min-width:768px) and (max-width:1200px){
+  .grid-reponsive__colum__col1{
+    .grid-reponsive__column{display:inline-block;box-sizing: content-box;/*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
+    .grid-reponsive__column_{width:60px;padding:0 10px;}
+    .grid-reponsive__column__col2{width:38,4px;}
+    .grid-reponsive__column__col3{width:180px;}
+    .grid-reponsive__column__col4{width:240px;}
+    .grid-reponsive__column__col5{width:300px;}
+    .grid-reponsive__column__col6{width:360px;}
+    .grid-reponsive__column__col7{width:420px;}
+    .grid-reponsive__column__col8{width:480px;}
+    .grid-reponsive__column__col9{width:540px;}
+    .grid-reponsive__column__col10{width:600px;}
+    .grid-reponsive__column__col11{width:660px;}
+    .grid-reponsive__column__col12{width:720px;}
+    .grid-reponsive__column__col13{width:780px;}
+    .grid-reponsive__column__col14{width:840px;}
+    .grid-reponsive__column__col15{width:900px;}
+  }
+}
+}
+/*mobile device column grid and height*/
+@media screen and (max-width:768px){
+  .grid-reponsive__colum__col1{
+    .grid-reponsive__column{display:inline-block;box-sizing: content-box;/*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
+    .grid-reponsive__column__col1{width:60px;padding:0 6.4px;}
+    .grid-reponsive__column__col2{width:76.8px;}
+    .grid-reponsive__column__col3{width:115.2px;}
+    .grid-reponsive__column__col4{width:153.6px;}
+    .grid-reponsive__column__col5{width:192px;}
+    .grid-reponsive__column__col6{width:230.4px;}
+    .grid-reponsive__column__col7{width:268.8px;}
+    .grid-reponsive__column__col8{width:307.2px;}
+    .grid-reponsive__column__col9{width:345.6px;}
+    .grid-reponsive__column__col10{width:384px;}
+    .grid-reponsive__column__col11{width:422.4px;}
+    .grid-reponsive__column__col12{width:460.8px;}
+    .grid-reponsive__column__col13{width:499.2px;}
+    .grid-reponsive__column__col14{width:537.6px;}
+    .grid-reponsive__column__col15{width:576px;}
+  }
+}
+}
+/*7 Footer*/
