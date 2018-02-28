@@ -20,6 +20,9 @@
 --2.1 Media queries mixins and functions
 --2.2 Container, columns, rows and sections, amin and aside and footer main styles
 --2.3 Header styles
+--2.3.1 header__logo
+--2.3.1 header__social
+--2.3.1 header__slogan
 --2.4 Single block styles
 3.Aside styles
 --3.1 Aside elements
@@ -35,6 +38,7 @@
 7. Footer
 --7.1 footer blocks
 --7.2 footer elements and plugins
+
 8. Extra styles for inputs groups
 --8.1 Input form
 --8.2 Input group
@@ -84,68 +88,43 @@ $fontsize:($basefont + ( 1 / $i));//there is very poor assumption that scaling i
 }
 /*end responsive typography*/
 /*2. Responsive grid*/
-.grid-reponsive__column{display:inline-block;box-sizing: content-box};/*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
-@media screen and (min-width:1200px){
-.container{width:1140px;}
-.grid-reponsive{display:inline-block;width:1140px;}
-.grid-reponsive__row {display:inline-block;width:auto;}
 
-
-.grid-reponsive__column_col1{width:60px;padding:0 10px;}
-.grid-reponsive__column__col2{width:120px;}
-.grid-reponsive__column__col3{width:180px;}
-.grid-reponsive__column__col4{width:240px;}
-.grid-reponsive__column__col5{width:300px;}
-.grid-reponsive__column__col6{width:360px;}
-.grid-reponsive__column__col7{width:420px;}
-.grid-reponsive__column__col8{width:480px;}
-.grid-reponsive__column__col9{width:540px;}
-.grid-reponsive__column__col10{width:600px;}
-.grid-reponsive__column__col11{width:660px;}
-.grid-reponsive__column__col12{width:720px;}
-.grid-reponsive__column__col13{width:780px;}
-.grid-reponsive__column__col14{width:840px;}
-.grid-reponsive__column__col15{width:900px;}
+.grid-responsive__column{display:inline-block;box-sizing: content-box};
+$colnumber:15;
+$c:1;
+@for $c from 1 through $colnumber{
+.grid-responsive__column__col-#{$c}{width:calc(100% * #{$c} / #{$colnumber});}
 }
+.container{ @include clearfix();display:block;margin:auto}
+main,aside{display:inline-block;}
+/*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
+@media screen and (min-width:1200px){
 
+.grid-responsive{display:inline-block;width:100%;}
+.grid-responsive__row {display:inline-block;width:100%;}
+.grid-responsive__column{padding:0 10px;@include clearfix();}
+}
+/* 2.3 header style */
+header{height:90px;width:auto;}
+hr.header__hr{height:8px;color:#{$basedarkblue};}
+/*--2.3.1 header__logo*/
+.header__social{
+.header__social__fb{background: url('/img/social.png');width:40px;height:40px;background-position: 0px 0px;}
+.header__social__yt{background: url('/img/social.png');background-position: 0px 0px;}
+.header__social__in{background: url('/img/social.png');background-position: 0px 0px;}
+}
+/* 2.3 end header style */
 /*tablet resolution*/
 @media screen and (min-width:768px) and (max-width:1200px){
 
-    .grid-reponsive__column_col1{width:60px;padding:0 10px;}
-    .grid-reponsive__column__col2{width:38.4px;}
-    .grid-reponsive__column__col3{width:180px;}
-    .grid-reponsive__column__col4{width:240px;}
-    .grid-reponsive__column__col5{width:300px;}
-    .grid-reponsive__column__col6{width:360px;}
-    .grid-reponsive__column__col7{width:420px;}
-    .grid-reponsive__column__col8{width:480px;}
-    .grid-reponsive__column__col9{width:540px;}
-    .grid-reponsive__column__col10{width:600px;}
-    .grid-reponsive__column__col11{width:660px;}
-    .grid-reponsive__column__col12{width:720px;}
-    .grid-reponsive__column__col13{width:780px;}
-    .grid-reponsive__column__col14{width:840px;}
-    .grid-reponsive__column__col15{width:900px;}
-
-
+.grid-responsive{display:inline-block;width:100%;}
+.grid-responsive__column{display:inline-block;box-sizing: content-box};
+.grid-reponsive__column_col1{width:60px;padding:0 10px;}
 }
 /*mobile device column grid and height*/
 @media screen and (min-width:0px) and (max-width:768px){
-    .grid-reponsive__column__col1{width:60px;padding:0 6.4px;}
-    .grid-reponsive__column__col2{width:76.8px;}
-    .grid-reponsive__column__col3{width:115.2px;}
-    .grid-reponsive__column__col4{width:153.6px;}
-    .grid-reponsive__column__col5{width:192px;}
-    .grid-reponsive__column__col6{width:230.4px;}
-    .grid-reponsive__column__col7{width:268.8px;}
-    .grid-reponsive__column__col8{width:307.2px;}
-    .grid-reponsive__column__col9{width:345.6px;}
-    .grid-reponsive__column__col10{width:384px;}
-    .grid-reponsive__column__col11{width:422.4px;}
-    .grid-reponsive__column__col12{width:460.8px;}
-    .grid-reponsive__column__col13{width:499.2px;}
-    .grid-reponsive__column__col14{width:537.6px;}
-    .grid-reponsive__column__col15{width:576px;}
-  }
+.container{width:100%;display:inline-block;margin:auto}
+.grid-responsive__column__col1{width:60px;padding:0 6.4px;}
+}
 
 /*7 Footer*/
