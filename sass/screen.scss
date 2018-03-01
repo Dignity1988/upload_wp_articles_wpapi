@@ -2,9 +2,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
-
-
 /*table of context/
 1. Mixins and functions
 --1.1 Css reset
@@ -38,13 +35,10 @@
 7. Footer
 --7.1 footer blocks
 --7.2 footer elements and plugins
-
 8. Extra styles for inputs groups
 --8.1 Input form
 --8.2 Input group
 /*end table of context*/
-
-
 /*--1.1 css reset*/
 @import "compass/reset";
 /*end css-reset*/
@@ -59,82 +53,97 @@
 $basefont: rgb(0,0,0);
 $linkcolor: rgb(44,66,90);
 $basedarkblue:rgb(44,66,90);
+$lightblue:rgb(187, 208, 225);
 $greycolor:rgb(142, 147, 153);
-$colors:$basefont, $linkcolor, $basedarkblue, $greycolor;
+$colors:$basefont, $linkcolor, $basedarkblue, $greycolor, $lightblue;
 /*--1.4 end-colors*/
 /*--1.4 responsive typography*/
 /*--1.7 sticky footer--*/
-@include sticky-footer(72px);
+@include sticky-footer(72px,"#root","#helper_footer","#footer");
 /*end sticky footer*/
-/* An attempt to set adaptive fontsizes for different size media queries are not set*/
-$large:5000px;/*extra large*/
-$tablet:1112px;
-$mobile:768px;
-$media:$large, $tablet, $mobile;
+/* adaptive fonts are not enebled conditioning mediaqueries @if media query = $value { $fontsize = $value /$fontsize; }
+$large:5000;/*extra large*/
+$tablet:1112;
+$mobile:768;
+$desktop:1200;
 $l:1; $i:1;
-$basefont:2rem;
-$typography:h1, h2, h3, h4, h5, h6, p;
-/* 2rem is the constantfound in common practives value that please use another value than 2 for code below to change sizes of fonts. Ths will be recalculated to $variable further. The h1 2rem is the highest value*/
-@for $l from 1 through 3{
-$previousscreen:nth($media, $l);
-$screen:nth($media, $l);
-@media screen and (max-width:#{$screen})  {
+$basefont:16;
+/*predifines based on Opera default sizes*/
+$h1:$basefont * 2;
+$h2:$basefont * 1.5;
+$h3:$basefont * 1.17;
+$h4:$basefont * 1;
+$p:$basefont * 1;
+$h5:0.83 * $basefont;
+$h6:0.67 * $basefont;
+$fontsizes: $h1, $h2 ,$h3 , $h4, $h5, $h6, $p;
+$typography: h1, h2, h3, h4, h5, h6, p;
 @for $i from 1 through length($typography) {
-$index:nth($typography, $i);
-$fontsize:($basefont + ( 1 / $i));//there is very poor assumption that scaling is not similara to stackoverflow pentatonic metaphor of music scaling but simple linera counting with proportion/
-#{$index}{font-size:calc( #{$fontsize});font-weight:100;font-family:"Roboto";}
+$index:nth($typography, $i );
+$fontsize:nth($fontsizes, $i);
+/*extra large*/
+@media screen and (min-width:#{$desktop}px)  {
+#{$index}{font-size:#{$fontsize}px;font-weight:100;font-family:"Roboto";}
+}
+/*desktop*/
+@media screen and (min-width:#{$tablet}px) and (max-width: #{desktop}px)  {
+#{$index}{font-size:#{$fontsize}px;font-weight:100;font-family:"Roboto";}
+}
+/*tablets*/
+@media screen and (min-width:#{$mobile}px) and (max-width:#{$desktop}px)   {
+#{$index}{font-size:#{$fontsize * $tablet / $desktop}px;font-weight:100;font-family:"Roboto";}
+}
+/*mobile*/
+@media screen and (max-width:#{$mobile}px){
+#{$index}{font-size:#{$fontsize * $mobile / $tablet}px;font-weight:100;font-family:"Roboto";}
 }
 }
-}
+
+
 /*end responsive typography*/
 /*--1.9 minor setup for main blocks*/
-div{box-sizing: content-box;}
-main,aside{display:inline-block;box-sizing: border-box;}
-.prefooter{width:100%;}
+*{box-sizing: border-box;}
+main,aside,header{display:inline-block;box-sizing: border-box;}
+/*-- end 1.9 minor setup for main blocks*/
 /*2. Responsive grid*/
-.grid-responsive{ display:block;margin:auto;width:100% / 15 * 13}
-.grid-responsive::after{@include clearfix();}
-.grid-responsive__column{display:inline-block;};
-.grid-responsive__column::after{@include clearfix();}
-$colnumber:15;
+.grid-responsive{display:block;margin:auto;max-width:1040px;width:auto; }
+.grid-responsive::after{@include clearfix;}
+
+.grid-responsive__column{display:inline-block;float:left;};
+.grid-responsive__column::before, .grid-responsive__row::before{@include clearfix; clear:both;}
+$colnumber:13;
 $c:1;
 @for $c from 1 through $colnumber{
 .grid-responsive__column__col-#{$c}{width:calc(100% * #{$c} / #{$colnumber});}
 }
-[class*="grid-responsive__column__col-"] {@include clearfix();float:left;}
-[class*="grid-responsive__column__col-"] ::after{@include clearfix();}
-
-
-
+[class*="grid-responsive__column__col-"] {float:left;}
+[class*="grid-responsive__column__col-"] ::after{@include clearfix;}
 /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
-@media screen and (min-width:1200px){
-.grid-responsive__row {display:inline-block;width:100%;}
-.grid-responsive__column{padding:0 10px;}
+@media screen and (min-width:1024px){
+.grid-responsive__row { width:100%;}
+.grid-responsive__column{padding:0 10px;min-height:1px;}
 }
 /* 2.3 header style */
 header{height:auto;width:auto;}
-
 hr.main__hr{height:8px;background:#{$basedarkblue};}
 /*--2.3.1 header__logo*/
 .header__social{
-.header__social__fb{background: url('/img/social.png');width:40px;height:40px;background-position: 0px 0px;}
-.header__social__yt{background: url('/img/social.png');background-position: 0px 0px;}
-.header__social__in{background: url('/img/social.png');background-position: 0px 0px;}
+.header__social__fb{background: url("./img/social.png");width:40px;height:40px;background-position: 0px 0px;}
+.header__social__yt{background: url("./img/social.png");background-position: 0px 0px;}
+.header__social__in{background: url("./img/social.png");background-position: 0px 0px;}
 }
 /* 2.3 end header style */
 /*tablet resolution*/
-@media screen and (min-width:768px) and (max-width:1200px){
-
-
-.grid-responsive__column{display:inline-block;box-sizing: content-box};
+@media screen and (min-width:768px) and (max-width:1024px){
 [class*="grid-responsive__column__col-"]{padding:0 10px;}
 }
 /*mobile device column grid and height*/
 @media screen and (min-width:0px) and (max-width:768px){
-.grid-responsive{width:100%;display:inline-block;margin:auto}
+.grid-responsive{width:100%;margin:auto}/*width of the main container*/
 [class*="grid-responsive__column__col-"]{padding:0 6.4px;width:100%}
 }
-
 /*7 Footer*/
-footer{background:#{basedarkblue};width:auto;}
+.footer{background:#{$basedarkblue};width:100%;}
 main,aside{float:left;}
+.prefooter,{width:100%;background:#{$lightblue};}
+/*7 end Footer*/
