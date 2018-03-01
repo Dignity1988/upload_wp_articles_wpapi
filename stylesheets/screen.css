@@ -130,7 +130,7 @@ html, body {
   margin-bottom: -72px;
 }
 /* line 18, ../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
-#root #root_footer {
+#root #helper_footer {
   height: 72px;
 }
 
@@ -142,372 +142,463 @@ html, body {
 }
 
 /*end sticky footer*/
-/* An attempt to set adaptive fontsizes for different size media queries are not set*/
+/* adaptive fonts are not enebled conditioning mediaqueries @if media query = $value { $fontsize = $value /$fontsize; }
+$large:5000;/*extra large*/
+/*predifines based on Opera default sizes*/
 /*extra large*/
-/* 2rem is the constantfound in common practives value that please use another value than 2 for code below to change sizes of fonts. Ths will be recalculated to $variable further. The h1 2rem is the highest value*/
-@media screen and (max-width: 5000px) {
-  /* line 85, ../sass/screen.scss */
+@media screen and (min-width: 1200px) {
+  /* line 87, ../sass/screen.scss */
   h1 {
-    font-size: calc( 3rem);
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-
-  /* line 85, ../sass/screen.scss */
-  h2 {
-    font-size: calc( 2.5rem);
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-
-  /* line 85, ../sass/screen.scss */
-  h3 {
-    font-size: calc( 2.33333rem);
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-
-  /* line 85, ../sass/screen.scss */
-  h4 {
-    font-size: calc( 2.25rem);
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-
-  /* line 85, ../sass/screen.scss */
-  h5 {
-    font-size: calc( 2.2rem);
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-
-  /* line 85, ../sass/screen.scss */
-  h6 {
-    font-size: calc( 2.16667rem);
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-
-  /* line 85, ../sass/screen.scss */
-  p {
-    font-size: calc( 2.14286rem);
+    font-size: 32px;
     font-weight: 100;
     font-family: "Roboto";
   }
 }
-@media screen and (max-width: 1112px) {
-  /* line 85, ../sass/screen.scss */
+/*desktop*/
+@media screen and (min-width: 1112px) and (max-width: desktoppx) {
+  /* line 91, ../sass/screen.scss */
   h1 {
-    font-size: calc( 3rem);
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-
-  /* line 85, ../sass/screen.scss */
-  h2 {
-    font-size: calc( 2.5rem);
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-
-  /* line 85, ../sass/screen.scss */
-  h3 {
-    font-size: calc( 2.33333rem);
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-
-  /* line 85, ../sass/screen.scss */
-  h4 {
-    font-size: calc( 2.25rem);
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-
-  /* line 85, ../sass/screen.scss */
-  h5 {
-    font-size: calc( 2.2rem);
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-
-  /* line 85, ../sass/screen.scss */
-  h6 {
-    font-size: calc( 2.16667rem);
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-
-  /* line 85, ../sass/screen.scss */
-  p {
-    font-size: calc( 2.14286rem);
+    font-size: 32px;
     font-weight: 100;
     font-family: "Roboto";
   }
 }
+/*tablets*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /* line 95, ../sass/screen.scss */
+  h1 {
+    font-size: 29.65333px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*mobile*/
 @media screen and (max-width: 768px) {
-  /* line 85, ../sass/screen.scss */
+  /* line 99, ../sass/screen.scss */
   h1 {
-    font-size: calc( 3rem);
+    font-size: 22.10072px;
     font-weight: 100;
     font-family: "Roboto";
   }
-
-  /* line 85, ../sass/screen.scss */
+}
+/*extra large*/
+@media screen and (min-width: 1200px) {
+  /* line 87, ../sass/screen.scss */
   h2 {
-    font-size: calc( 2.5rem);
+    font-size: 24px;
     font-weight: 100;
     font-family: "Roboto";
   }
-
-  /* line 85, ../sass/screen.scss */
+}
+/*desktop*/
+@media screen and (min-width: 1112px) and (max-width: desktoppx) {
+  /* line 91, ../sass/screen.scss */
+  h2 {
+    font-size: 24px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*tablets*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /* line 95, ../sass/screen.scss */
+  h2 {
+    font-size: 22.24px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 99, ../sass/screen.scss */
+  h2 {
+    font-size: 16.57554px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*extra large*/
+@media screen and (min-width: 1200px) {
+  /* line 87, ../sass/screen.scss */
   h3 {
-    font-size: calc( 2.33333rem);
+    font-size: 18.72px;
     font-weight: 100;
     font-family: "Roboto";
   }
-
-  /* line 85, ../sass/screen.scss */
+}
+/*desktop*/
+@media screen and (min-width: 1112px) and (max-width: desktoppx) {
+  /* line 91, ../sass/screen.scss */
+  h3 {
+    font-size: 18.72px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*tablets*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /* line 95, ../sass/screen.scss */
+  h3 {
+    font-size: 17.3472px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 99, ../sass/screen.scss */
+  h3 {
+    font-size: 12.92892px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*extra large*/
+@media screen and (min-width: 1200px) {
+  /* line 87, ../sass/screen.scss */
   h4 {
-    font-size: calc( 2.25rem);
+    font-size: 16px;
     font-weight: 100;
     font-family: "Roboto";
   }
-
-  /* line 85, ../sass/screen.scss */
+}
+/*desktop*/
+@media screen and (min-width: 1112px) and (max-width: desktoppx) {
+  /* line 91, ../sass/screen.scss */
+  h4 {
+    font-size: 16px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*tablets*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /* line 95, ../sass/screen.scss */
+  h4 {
+    font-size: 14.82667px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 99, ../sass/screen.scss */
+  h4 {
+    font-size: 11.05036px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*extra large*/
+@media screen and (min-width: 1200px) {
+  /* line 87, ../sass/screen.scss */
   h5 {
-    font-size: calc( 2.2rem);
+    font-size: 13.28px;
     font-weight: 100;
     font-family: "Roboto";
   }
-
-  /* line 85, ../sass/screen.scss */
+}
+/*desktop*/
+@media screen and (min-width: 1112px) and (max-width: desktoppx) {
+  /* line 91, ../sass/screen.scss */
+  h5 {
+    font-size: 13.28px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*tablets*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /* line 95, ../sass/screen.scss */
+  h5 {
+    font-size: 12.30613px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 99, ../sass/screen.scss */
+  h5 {
+    font-size: 9.1718px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*extra large*/
+@media screen and (min-width: 1200px) {
+  /* line 87, ../sass/screen.scss */
   h6 {
-    font-size: calc( 2.16667rem);
+    font-size: 10.72px;
     font-weight: 100;
     font-family: "Roboto";
   }
-
-  /* line 85, ../sass/screen.scss */
+}
+/*desktop*/
+@media screen and (min-width: 1112px) and (max-width: desktoppx) {
+  /* line 91, ../sass/screen.scss */
+  h6 {
+    font-size: 10.72px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*tablets*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /* line 95, ../sass/screen.scss */
+  h6 {
+    font-size: 9.93387px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 99, ../sass/screen.scss */
+  h6 {
+    font-size: 7.40374px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*extra large*/
+@media screen and (min-width: 1200px) {
+  /* line 87, ../sass/screen.scss */
   p {
-    font-size: calc( 2.14286rem);
+    font-size: 16px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*desktop*/
+@media screen and (min-width: 1112px) and (max-width: desktoppx) {
+  /* line 91, ../sass/screen.scss */
+  p {
+    font-size: 16px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*tablets*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /* line 95, ../sass/screen.scss */
+  p {
+    font-size: 14.82667px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 99, ../sass/screen.scss */
+  p {
+    font-size: 11.05036px;
     font-weight: 100;
     font-family: "Roboto";
   }
 }
 /*end responsive typography*/
 /*--1.9 minor setup for main blocks*/
-/* line 91, ../sass/screen.scss */
-div {
-  box-sizing: content-box;
+/* line 106, ../sass/screen.scss */
+* {
+  box-sizing: border-box;
 }
 
-/* line 92, ../sass/screen.scss */
-main, aside {
+/* line 107, ../sass/screen.scss */
+main, aside, header {
   display: inline-block;
   box-sizing: border-box;
 }
 
-/* line 93, ../sass/screen.scss */
-.prefooter {
-  width: 100%;
-}
-
+/*-- end 1.9 minor setup for main blocks*/
 /*2. Responsive grid*/
-/* line 95, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .grid-responsive {
   display: block;
   margin: auto;
-  width: 86.66667%;
+  max-width: 1040px;
+  width: auto;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 .grid-responsive::after {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 97, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .grid-responsive__column {
   display: inline-block;
-}
-
-/* line 98, ../sass/screen.scss */
-.grid-responsive__column::after {
-  overflow: hidden;
-  *zoom: 1;
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-1 {
-  width: calc(100% * 1 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-2 {
-  width: calc(100% * 2 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-3 {
-  width: calc(100% * 3 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-4 {
-  width: calc(100% * 4 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-5 {
-  width: calc(100% * 5 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-6 {
-  width: calc(100% * 6 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-7 {
-  width: calc(100% * 7 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-8 {
-  width: calc(100% * 8 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-9 {
-  width: calc(100% * 9 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-10 {
-  width: calc(100% * 10 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-11 {
-  width: calc(100% * 11 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-12 {
-  width: calc(100% * 12 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-13 {
-  width: calc(100% * 13 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-14 {
-  width: calc(100% * 14 / 15);
-}
-
-/* line 102, ../sass/screen.scss */
-.grid-responsive__column__col-15 {
-  width: calc(100% * 15 / 15);
-}
-
-/* line 104, ../sass/screen.scss */
-[class*="grid-responsive__column__col-"] {
-  overflow: hidden;
-  *zoom: 1;
   float: left;
 }
 
-/* line 105, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
+.grid-responsive__column::before, .grid-responsive__row::before {
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-1 {
+  width: calc(100% * 1 / 13);
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-2 {
+  width: calc(100% * 2 / 13);
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-3 {
+  width: calc(100% * 3 / 13);
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-4 {
+  width: calc(100% * 4 / 13);
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-5 {
+  width: calc(100% * 5 / 13);
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-6 {
+  width: calc(100% * 6 / 13);
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-7 {
+  width: calc(100% * 7 / 13);
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-8 {
+  width: calc(100% * 8 / 13);
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-9 {
+  width: calc(100% * 9 / 13);
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-10 {
+  width: calc(100% * 10 / 13);
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-11 {
+  width: calc(100% * 11 / 13);
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-12 {
+  width: calc(100% * 12 / 13);
+}
+
+/* line 118, ../sass/screen.scss */
+.grid-responsive__column__col-13 {
+  width: calc(100% * 13 / 13);
+}
+
+/* line 120, ../sass/screen.scss */
+[class*="grid-responsive__column__col-"] {
+  float: left;
+}
+
+/* line 121, ../sass/screen.scss */
 [class*="grid-responsive__column__col-"] ::after {
   overflow: hidden;
   *zoom: 1;
 }
 
 /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
-@media screen and (min-width: 1200px) {
-  /* line 111, ../sass/screen.scss */
+@media screen and (min-width: 1024px) {
+  /* line 124, ../sass/screen.scss */
   .grid-responsive__row {
-    display: inline-block;
     width: 100%;
   }
 
-  /* line 112, ../sass/screen.scss */
+  /* line 125, ../sass/screen.scss */
   .grid-responsive__column {
     padding: 0 10px;
+    min-height: 1px;
   }
 }
 /* 2.3 header style */
-/* line 115, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 header {
   height: auto;
   width: auto;
 }
 
-/* line 117, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 hr.main__hr {
   height: 8px;
   background: #2c425a;
 }
 
 /*--2.3.1 header__logo*/
-/* line 120, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .header__social .header__social__fb {
-  background: url("/img/social.png");
+  background: url("./img/social.png");
   width: 40px;
   height: 40px;
   background-position: 0px 0px;
 }
-/* line 121, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .header__social .header__social__yt {
-  background: url("/img/social.png");
+  background: url("./img/social.png");
   background-position: 0px 0px;
 }
-/* line 122, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 .header__social .header__social__in {
-  background: url("/img/social.png");
+  background: url("./img/social.png");
   background-position: 0px 0px;
 }
 
 /* 2.3 end header style */
 /*tablet resolution*/
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 129, ../sass/screen.scss */
-  .grid-responsive__column {
-    display: inline-block;
-    box-sizing: content-box;
-  }
-
-  /* line 130, ../sass/screen.scss */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* line 139, ../sass/screen.scss */
   [class*="grid-responsive__column__col-"] {
     padding: 0 10px;
   }
 }
 /*mobile device column grid and height*/
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 134, ../sass/screen.scss */
+  /* line 143, ../sass/screen.scss */
   .grid-responsive {
     width: 100%;
-    display: inline-block;
     margin: auto;
   }
 
-  /* line 135, ../sass/screen.scss */
+  /*width of the main container*/
+  /* line 144, ../sass/screen.scss */
   [class*="grid-responsive__column__col-"] {
     padding: 0 6.4px;
     width: 100%;
   }
 }
 /*7 Footer*/
-/* line 139, ../sass/screen.scss */
-footer {
-  background: basedarkblue;
-  width: auto;
+/* line 147, ../sass/screen.scss */
+.footer {
+  background: #2c425a;
+  width: 100%;
 }
 
-/* line 140, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 main, aside {
   float: left;
 }
+
+/* line 149, ../sass/screen.scss */
+.prefooter {
+  width: 100%;
+  background: #bbd0e1;
+}
+
+/*7 end Footer*/
