@@ -15,7 +15,7 @@
 --1.6 crossbrowser prefixer
 --1.7 responsive fonts for devices
 --1.8 sticky footer
---1.9
+--1.9 minor setup for main blocks
 2. Responsive grid
 --2.1 Media queries mixins and functions
 --2.2 Container, columns, rows and sections, amin and aside and footer main styles
@@ -87,21 +87,25 @@ $fontsize:($basefont + ( 1 / $i));//there is very poor assumption that scaling i
 }
 }
 /*end responsive typography*/
+/*--1.9 minor setup for main blocks*/
+div{box-sizing: content-box;}
+main,aside{display:inline-block;box-sizing: border-box;}
+.prefooter{width:100%;}
 /*2. Responsive grid*/
 .grid-responsive{ display:block;margin:auto;width:100% / 15 * 13}
 .grid-responsive::after{@include clearfix();}
-.grid-responsive__column{display:inline-block;box-sizing: content-box;};
+.grid-responsive__column{display:inline-block;};
 .grid-responsive__column::after{@include clearfix();}
 $colnumber:15;
 $c:1;
 @for $c from 1 through $colnumber{
 .grid-responsive__column__col-#{$c}{width:calc(100% * #{$c} / #{$colnumber});}
 }
-[class*="grid-responsive__column__col-"] {}
-[class*="grid-responsive__column__col-"] ::after
+[class*="grid-responsive__column__col-"] {@include clearfix();float:left;}
+[class*="grid-responsive__column__col-"] ::after{@include clearfix();}
 
 
-main,aside{display:inline-block;}
+
 /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
 @media screen and (min-width:1200px){
 .grid-responsive__row {display:inline-block;width:100%;}
@@ -132,4 +136,5 @@ hr.main__hr{height:8px;background:#{$basedarkblue};}
 }
 
 /*7 Footer*/
+footer{background:#{basedarkblue};width:auto;}
 main,aside{float:left;}
