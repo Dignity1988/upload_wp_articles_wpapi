@@ -419,14 +419,14 @@ main, aside {
 /* 2.3 header style */
 /* line 111, ../sass/screen.scss */
 header {
-  height: 90px;
+  height: auto;
   width: auto;
 }
 
 /* line 113, ../sass/screen.scss */
-hr.header__hr {
+hr.main__hr {
   height: 8px;
-  color: #2c425a;
+  background: #2c425a;
 }
 
 /*--2.3.1 header__logo*/
@@ -458,8 +458,7 @@ hr.header__hr {
   }
 
   /* line 126, ../sass/screen.scss */
-  .grid-reponsive__column_col1 {
-    width: 60px;
+  [class*="grid-responsive__column__col-"] {
     padding: 0 10px;
   }
 }
@@ -473,8 +472,9 @@ hr.header__hr {
   }
 
   /* line 131, ../sass/screen.scss */
-  .grid-responsive__column__col {
+  [class*="grid-responsive__column__col-"] {
     padding: 0 6.4px;
+    width: 100%;
   }
 }
 /*7 Footer*/
