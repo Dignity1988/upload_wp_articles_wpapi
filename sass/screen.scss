@@ -88,24 +88,28 @@ $fontsize:($basefont + ( 1 / $i));//there is very poor assumption that scaling i
 }
 /*end responsive typography*/
 /*2. Responsive grid*/
-
-.grid-responsive__column{display:inline-block;box-sizing: content-box};
+.grid-responsive{ display:block;margin:auto;width:100% / 15 * 13}
+.grid-responsive::after{@include clearfix();}
+.grid-responsive__column{display:inline-block;box-sizing: content-box;};
+.grid-responsive__column::after{@include clearfix();}
 $colnumber:15;
 $c:1;
 @for $c from 1 through $colnumber{
 .grid-responsive__column__col-#{$c}{width:calc(100% * #{$c} / #{$colnumber});}
 }
-.container{ @include clearfix();display:block;margin:auto}
+[class*="grid-responsive__column__col-"] {}
+[class*="grid-responsive__column__col-"] ::after
+
+
 main,aside{display:inline-block;}
 /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
 @media screen and (min-width:1200px){
-
-.grid-responsive{display:inline-block;width:100%;}
 .grid-responsive__row {display:inline-block;width:100%;}
-.grid-responsive__column{padding:0 10px;@include clearfix();}
+.grid-responsive__column{padding:0 10px;}
 }
 /* 2.3 header style */
 header{height:90px;width:auto;}
+
 hr.header__hr{height:8px;color:#{$basedarkblue};}
 /*--2.3.1 header__logo*/
 .header__social{
@@ -117,14 +121,15 @@ hr.header__hr{height:8px;color:#{$basedarkblue};}
 /*tablet resolution*/
 @media screen and (min-width:768px) and (max-width:1200px){
 
-.grid-responsive{display:inline-block;width:100%;}
+
 .grid-responsive__column{display:inline-block;box-sizing: content-box};
 .grid-reponsive__column_col1{width:60px;padding:0 10px;}
 }
 /*mobile device column grid and height*/
 @media screen and (min-width:0px) and (max-width:768px){
-.container{width:100%;display:inline-block;margin:auto}
-.grid-responsive__column__col1{width:60px;padding:0 6.4px;}
+.grid-responsive{width:100%;display:inline-block;margin:auto}
+.grid-responsive__column__col{padding:0 6.4px;}
 }
 
 /*7 Footer*/
+main,aside{float:left;}

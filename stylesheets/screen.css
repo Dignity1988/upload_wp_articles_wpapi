@@ -297,148 +297,152 @@ html, body {
 }
 /*end responsive typography*/
 /*2. Responsive grid*/
+/* line 91, ../sass/screen.scss */
+.grid-responsive {
+  display: block;
+  margin: auto;
+  width: 86.66667%;
+}
+
 /* line 92, ../sass/screen.scss */
+.grid-responsive::after {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 93, ../sass/screen.scss */
 .grid-responsive__column {
   display: inline-block;
   box-sizing: content-box;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
+.grid-responsive__column::after {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-1 {
   width: calc(100% * 1 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-2 {
   width: calc(100% * 2 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-3 {
   width: calc(100% * 3 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-4 {
   width: calc(100% * 4 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-5 {
   width: calc(100% * 5 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-6 {
   width: calc(100% * 6 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-7 {
   width: calc(100% * 7 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-8 {
   width: calc(100% * 8 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-9 {
   width: calc(100% * 9 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-10 {
   width: calc(100% * 10 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-11 {
   width: calc(100% * 11 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-12 {
   width: calc(100% * 12 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-13 {
   width: calc(100% * 13 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-14 {
   width: calc(100% * 14 / 15);
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .grid-responsive__column__col-15 {
   width: calc(100% * 15 / 15);
 }
 
-/* line 98, ../sass/screen.scss */
-.container {
-  overflow: hidden;
-  *zoom: 1;
-  display: block;
-  margin: auto;
-}
-
-/* line 99, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
+[class*="grid-responsive__column__col-"] ::after
 main, aside {
   display: inline-block;
 }
 
 /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
 @media screen and (min-width: 1200px) {
-  /* line 103, ../sass/screen.scss */
-  .grid-responsive {
-    display: inline-block;
-    width: 100%;
-  }
-
-  /* line 104, ../sass/screen.scss */
+  /* line 107, ../sass/screen.scss */
   .grid-responsive__row {
     display: inline-block;
     width: 100%;
   }
 
-  /* line 105, ../sass/screen.scss */
+  /* line 108, ../sass/screen.scss */
   .grid-responsive__column {
     padding: 0 10px;
-    overflow: hidden;
-    *zoom: 1;
   }
 }
 /* 2.3 header style */
-/* line 108, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 header {
   height: 90px;
   width: auto;
 }
 
-/* line 109, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 hr.header__hr {
   height: 8px;
   color: #2c425a;
 }
 
 /*--2.3.1 header__logo*/
-/* line 112, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .header__social .header__social__fb {
   background: url("/img/social.png");
   width: 40px;
   height: 40px;
   background-position: 0px 0px;
 }
-/* line 113, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .header__social .header__social__yt {
   background: url("/img/social.png");
   background-position: 0px 0px;
 }
-/* line 114, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .header__social .header__social__in {
   background: url("/img/social.png");
   background-position: 0px 0px;
@@ -447,19 +451,13 @@ hr.header__hr {
 /* 2.3 end header style */
 /*tablet resolution*/
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 120, ../sass/screen.scss */
-  .grid-responsive {
-    display: inline-block;
-    width: 100%;
-  }
-
-  /* line 121, ../sass/screen.scss */
+  /* line 125, ../sass/screen.scss */
   .grid-responsive__column {
     display: inline-block;
     box-sizing: content-box;
   }
 
-  /* line 122, ../sass/screen.scss */
+  /* line 126, ../sass/screen.scss */
   .grid-reponsive__column_col1 {
     width: 60px;
     padding: 0 10px;
@@ -467,17 +465,20 @@ hr.header__hr {
 }
 /*mobile device column grid and height*/
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 126, ../sass/screen.scss */
-  .container {
+  /* line 130, ../sass/screen.scss */
+  .grid-responsive {
     width: 100%;
     display: inline-block;
     margin: auto;
   }
 
-  /* line 127, ../sass/screen.scss */
-  .grid-responsive__column__col1 {
-    width: 60px;
+  /* line 131, ../sass/screen.scss */
+  .grid-responsive__column__col {
     padding: 0 6.4px;
   }
 }
 /*7 Footer*/
+/* line 135, ../sass/screen.scss */
+main, aside {
+  float: left;
+}
