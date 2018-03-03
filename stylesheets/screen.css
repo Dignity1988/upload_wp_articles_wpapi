@@ -35,7 +35,6 @@
 7. Footer
 --7.1 footer blocks
 --7.2 footer elements and plugins
-
 8. Extra styles for inputs groups
 --8.1 Input form
 --8.2 Input group
@@ -181,6 +180,15 @@ $large:5000;/*extra large*/
     font-family: "Roboto";
   }
 }
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 103, ../sass/screen.scss */
+  h1 {
+    font-size: 22.10072px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
 /*extra large*/
 @media screen and (min-width: 1200px) {
   /* line 87, ../sass/screen.scss */
@@ -211,6 +219,15 @@ $large:5000;/*extra large*/
 /*mobile*/
 @media screen and (max-width: 768px) {
   /* line 99, ../sass/screen.scss */
+  h2 {
+    font-size: 16.57554px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 103, ../sass/screen.scss */
   h2 {
     font-size: 16.57554px;
     font-weight: 100;
@@ -253,6 +270,15 @@ $large:5000;/*extra large*/
     font-family: "Roboto";
   }
 }
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 103, ../sass/screen.scss */
+  h3 {
+    font-size: 12.92892px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
 /*extra large*/
 @media screen and (min-width: 1200px) {
   /* line 87, ../sass/screen.scss */
@@ -283,6 +309,15 @@ $large:5000;/*extra large*/
 /*mobile*/
 @media screen and (max-width: 768px) {
   /* line 99, ../sass/screen.scss */
+  h4 {
+    font-size: 11.05036px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 103, ../sass/screen.scss */
   h4 {
     font-size: 11.05036px;
     font-weight: 100;
@@ -325,6 +360,15 @@ $large:5000;/*extra large*/
     font-family: "Roboto";
   }
 }
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 103, ../sass/screen.scss */
+  h5 {
+    font-size: 9.1718px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
 /*extra large*/
 @media screen and (min-width: 1200px) {
   /* line 87, ../sass/screen.scss */
@@ -355,6 +399,15 @@ $large:5000;/*extra large*/
 /*mobile*/
 @media screen and (max-width: 768px) {
   /* line 99, ../sass/screen.scss */
+  h6 {
+    font-size: 7.40374px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 103, ../sass/screen.scss */
   h6 {
     font-size: 7.40374px;
     font-weight: 100;
@@ -397,22 +450,55 @@ $large:5000;/*extra large*/
     font-family: "Roboto";
   }
 }
+/*mobile*/
+@media screen and (max-width: 768px) {
+  /* line 103, ../sass/screen.scss */
+  p {
+    font-size: 11.05036px;
+    font-weight: 100;
+    font-family: "Roboto";
+  }
+}
+/* line 107, ../sass/screen.scss */
+img {
+  max-width: 100%;
+  height: 100%;
+}
+
 /*end responsive typography*/
 /*--1.9 minor setup for main blocks*/
-/* line 106, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 107, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 main, aside, header {
   display: inline-block;
   box-sizing: border-box;
 }
 
+/* line 112, ../sass/screen.scss */
+a {
+  color: #2c425a;
+  text-decoration: none;
+}
+
+/* line 113, ../sass/screen.scss */
+a:hover {
+  color: #2c425a;
+  text-decoration: none;
+}
+
+/* line 114, ../sass/screen.scss */
+img, .sidebar-main__banner__img__responsive {
+  max-width: 100%;
+  height: 100%;
+}
+
 /*-- end 1.9 minor setup for main blocks*/
 /*2. Responsive grid*/
-/* line 110, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .grid-responsive {
   display: block;
   margin: auto;
@@ -420,96 +506,96 @@ main, aside, header {
   width: auto;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .grid-responsive::after {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 .grid-responsive__column {
   display: inline-block;
   float: left;
 }
 
-/* line 114, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .grid-responsive__column::before, .grid-responsive__row::before {
   overflow: hidden;
   *zoom: 1;
   clear: both;
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-1 {
   width: calc(100% * 1 / 13);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-2 {
   width: calc(100% * 2 / 13);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-3 {
   width: calc(100% * 3 / 13);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-4 {
   width: calc(100% * 4 / 13);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-5 {
   width: calc(100% * 5 / 13);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-6 {
   width: calc(100% * 6 / 13);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-7 {
   width: calc(100% * 7 / 13);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-8 {
   width: calc(100% * 8 / 13);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-9 {
   width: calc(100% * 9 / 13);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-10 {
   width: calc(100% * 10 / 13);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-11 {
   width: calc(100% * 11 / 13);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-12 {
   width: calc(100% * 12 / 13);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .grid-responsive__column__col-13 {
   width: calc(100% * 13 / 13);
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 [class*="grid-responsive__column__col-"] {
   float: left;
 }
 
-/* line 121, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 [class*="grid-responsive__column__col-"] ::after {
   overflow: hidden;
   *zoom: 1;
@@ -517,44 +603,49 @@ main, aside, header {
 
 /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
 @media screen and (min-width: 1024px) {
-  /* line 124, ../sass/screen.scss */
+  /* line 131, ../sass/screen.scss */
   .grid-responsive__row {
     width: 100%;
   }
 
-  /* line 125, ../sass/screen.scss */
+  /* line 132, ../sass/screen.scss */
   .grid-responsive__column {
     padding: 0 10px;
     min-height: 1px;
   }
 }
 /* 2.3 header style */
-/* line 128, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 header {
   height: auto;
   width: auto;
 }
 
-/* line 129, ../sass/screen.scss */
-hr.main__hr {
+/* line 136, ../sass/screen.scss */
+hr .main__hr {
   height: 8px;
   background: #2c425a;
 }
 
 /*--2.3.1 header__logo*/
-/* line 132, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
+.header__social .header__social__contacts address {
+  display: inline-block;
+  float: right;
+}
+/* line 140, ../sass/screen.scss */
 .header__social .header__social__fb {
   background: url("./img/social.png");
   width: 40px;
   height: 40px;
   background-position: 0px 0px;
 }
-/* line 133, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 .header__social .header__social__yt {
   background: url("./img/social.png");
   background-position: 0px 0px;
 }
-/* line 134, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 .header__social .header__social__in {
   background: url("./img/social.png");
   background-position: 0px 0px;
@@ -563,39 +654,93 @@ hr.main__hr {
 /* 2.3 end header style */
 /*tablet resolution*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* line 139, ../sass/screen.scss */
+  /* line 147, ../sass/screen.scss */
   [class*="grid-responsive__column__col-"] {
     padding: 0 10px;
   }
 }
 /*mobile device column grid and height*/
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 143, ../sass/screen.scss */
+  /* line 151, ../sass/screen.scss */
   .grid-responsive {
     width: 100%;
     margin: auto;
   }
 
   /*width of the main container*/
-  /* line 144, ../sass/screen.scss */
+  /* line 152, ../sass/screen.scss */
   [class*="grid-responsive__column__col-"] {
     padding: 0 6.4px;
     width: 100%;
   }
+
+  /* line 153, ../sass/screen.scss */
+  .sidebar-main_menu__link__active {
+    width: 100%;
+  }
 }
+/*maim menu*/
+/* line 156, ../sass/screen.scss */
+.sidebar-main__menu {
+  background: #666666;
+}
+
+/* line 158, ../sass/screen.scss */
+.sidebar-main_menu__link {
+  display: block;
+  padding: 20px;
+  background: #e1e1e1;
+  border-bottom: 1px solid grey;
+}
+/* line 159, ../sass/screen.scss */
+.sidebar-main_menu__link a {
+  text-decoration: none;
+}
+
+/* line 161, ../sass/screen.scss */
+.sidebar-main_menu__link__active {
+  background: #bbd0e1;
+  color: blue;
+  width: 120%;
+  border-right-width: 20px;
+  border-left-width: 20px;
+}
+/* line 163, ../sass/screen.scss */
+.sidebar-main_menu__link__active::before {
+  content: '';
+  border-left: 22px solid #b8d2e0;
+  border-bottom: 26px solid #fff;
+  border-top: 30px solid #fff;
+  float: right;
+  display: block;
+  margin-right: -40px;
+  top: 0;
+  margin-top: -20px;
+}
+/* line 172, ../sass/screen.scss */
+.sidebar-main_menu__link__active::after {
+  content: '';
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  margin: 3px;
+  float: right;
+}
+
 /*7 Footer*/
-/* line 147, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .footer {
   background: #2c425a;
   width: 100%;
 }
 
-/* line 148, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 main, aside {
   float: left;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 .prefooter {
   width: 100%;
   background: #bbd0e1;
