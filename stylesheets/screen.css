@@ -473,129 +473,140 @@ img {
 }
 
 /* line 111, ../sass/screen.scss */
-main, aside, header {
+#root main, #root aside, #root header {
   display: inline-block;
   box-sizing: border-box;
+  padding: 0;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 a {
   color: #2c425a;
   text-decoration: none;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 a:hover {
   color: #2c425a;
   text-decoration: none;
 }
 
-/* line 114, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 img, .sidebar-main__banner__img__responsive {
   max-width: 100%;
   height: 100%;
 }
 
+/* line 116, ../sass/screen.scss */
+aside {
+  padding-right: 0;
+}
+
 /*-- end 1.9 minor setup for main blocks*/
 /*2. Responsive grid*/
-/* line 117, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 .grid-responsive {
   display: block;
   margin: auto;
   max-width: 1040px;
   width: auto;
+  -webkit-box-shadow: 5px 0px 1px 0px #2c425a;
+  -moz-box-shadow: 5px 0px 0px 0px #2c425a;
+  box-shadow: 5px 0px 0px 0px #2c425a;
 }
-
-/* line 118, ../sass/screen.scss */
-.grid-responsive::after {
+/* line 122, ../sass/screen.scss */
+.grid-responsive .grid-responsive__container {
+  display: inline-block;
+}
+/* line 123, ../sass/screen.scss */
+.grid-responsive .grid-responsive::after {
   overflow: hidden;
   *zoom: 1;
 }
-
-/* line 120, ../sass/screen.scss */
-.grid-responsive__column {
+/* line 125, ../sass/screen.scss */
+.grid-responsive .grid-responsive__column {
   display: inline-block;
   float: left;
+  min-height: 1px;
 }
-
-/* line 121, ../sass/screen.scss */
-.grid-responsive__column::before, .grid-responsive__row::before {
+/* line 126, ../sass/screen.scss */
+.grid-responsive .grid-responsive__column::before, .grid-responsive .grid-responsive__row::before {
   overflow: hidden;
   *zoom: 1;
   clear: both;
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-1 {
   width: calc(100% * 1 / 13);
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-2 {
   width: calc(100% * 2 / 13);
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-3 {
   width: calc(100% * 3 / 13);
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-4 {
   width: calc(100% * 4 / 13);
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-5 {
   width: calc(100% * 5 / 13);
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-6 {
   width: calc(100% * 6 / 13);
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-7 {
   width: calc(100% * 7 / 13);
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-8 {
   width: calc(100% * 8 / 13);
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-9 {
   width: calc(100% * 9 / 13);
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-10 {
   width: calc(100% * 10 / 13);
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-11 {
   width: calc(100% * 11 / 13);
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-12 {
   width: calc(100% * 12 / 13);
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .grid-responsive__column__col-13 {
   width: calc(100% * 13 / 13);
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 [class*="grid-responsive__column__col-"] {
   float: left;
 }
 
-/* line 128, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 [class*="grid-responsive__column__col-"] ::after {
   overflow: hidden;
   *zoom: 1;
@@ -603,101 +614,103 @@ img, .sidebar-main__banner__img__responsive {
 
 /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
 @media screen and (min-width: 1024px) {
-  /* line 131, ../sass/screen.scss */
+  /* line 136, ../sass/screen.scss */
   .grid-responsive__row {
     width: 100%;
   }
 
-  /* line 132, ../sass/screen.scss */
+  /* line 137, ../sass/screen.scss */
   .grid-responsive__column {
     padding: 0 10px;
-    min-height: 1px;
   }
 }
 /* 2.3 header style */
-/* line 135, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 header {
   height: auto;
   width: auto;
 }
 
-/* line 136, ../sass/screen.scss */
-hr .main__hr {
+/* line 141, ../sass/screen.scss */
+hr.main__hr {
   height: 8px;
   background: #2c425a;
+  margin-top: 0px;
 }
 
 /*--2.3.1 header__logo*/
-/* line 139, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 .header__social .header__social__contacts address {
   display: inline-block;
   float: right;
 }
-/* line 140, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 .header__social .header__social__fb {
   background: url("./img/social.png");
   width: 40px;
   height: 40px;
   background-position: 0px 0px;
 }
-/* line 141, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .header__social .header__social__yt {
   background: url("./img/social.png");
   background-position: 0px 0px;
 }
-/* line 142, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .header__social .header__social__in {
   background: url("./img/social.png");
   background-position: 0px 0px;
 }
 
 /* 2.3 end header style */
+/*3. Sidebar styles*/
+/*end sidebar*/
 /*tablet resolution*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* line 147, ../sass/screen.scss */
+  /* line 159, ../sass/screen.scss */
   [class*="grid-responsive__column__col-"] {
     padding: 0 10px;
   }
 }
 /*mobile device column grid and height*/
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 151, ../sass/screen.scss */
+  /* line 163, ../sass/screen.scss */
   .grid-responsive {
     width: 100%;
     margin: auto;
   }
 
   /*width of the main container*/
-  /* line 152, ../sass/screen.scss */
+  /* line 164, ../sass/screen.scss */
   [class*="grid-responsive__column__col-"] {
     padding: 0 6.4px;
     width: 100%;
   }
 
-  /* line 153, ../sass/screen.scss */
+  /* line 165, ../sass/screen.scss */
   .sidebar-main_menu__link__active {
     width: 100%;
   }
 }
 /*maim menu*/
-/* line 156, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .sidebar-main__menu {
   background: #666666;
 }
 
-/* line 158, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .sidebar-main_menu__link {
   display: block;
   padding: 20px;
   background: #e1e1e1;
   border-bottom: 1px solid grey;
 }
-/* line 159, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 .sidebar-main_menu__link a {
   text-decoration: none;
 }
 
-/* line 161, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .sidebar-main_menu__link__active {
   background: #bbd0e1;
   color: blue;
@@ -705,7 +718,7 @@ hr .main__hr {
   border-right-width: 20px;
   border-left-width: 20px;
 }
-/* line 163, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 .sidebar-main_menu__link__active::before {
   content: '';
   border-left: 22px solid #b8d2e0;
@@ -717,7 +730,7 @@ hr .main__hr {
   top: 0;
   margin-top: -20px;
 }
-/* line 172, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 .sidebar-main_menu__link__active::after {
   content: '';
   border-radius: 50%;
@@ -729,18 +742,18 @@ hr .main__hr {
 }
 
 /*7 Footer*/
-/* line 178, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 .footer {
   background: #2c425a;
   width: 100%;
 }
 
-/* line 179, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 main, aside {
   float: left;
 }
 
-/* line 180, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .prefooter {
   width: 100%;
   background: #bbd0e1;
