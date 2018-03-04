@@ -523,6 +523,11 @@ aside {
   overflow: hidden;
   *zoom: 1;
 }
+/* line 124, ../sass/screen.scss */
+.grid-responsive .grid-responsive__row {
+  width: 100%;
+  display: inline-block;
+}
 /* line 125, ../sass/screen.scss */
 .grid-responsive .grid-responsive__column {
   display: inline-block;
@@ -615,16 +620,20 @@ aside {
 /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
 @media screen and (min-width: 1024px) {
   /* line 136, ../sass/screen.scss */
-  .grid-responsive__row {
-    width: 100%;
-  }
-
-  /* line 137, ../sass/screen.scss */
   .grid-responsive__column {
     padding: 0 10px;
   }
 }
 /* 2.3 header style */
+/* line 139, ../sass/screen.scss */
+.header__social-network {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin: 0 5px;
+}
+
 /* line 140, ../sass/screen.scss */
 header {
   height: auto;
@@ -640,26 +649,68 @@ hr.main__hr {
 
 /*--2.3.1 header__logo*/
 /* line 144, ../sass/screen.scss */
-.header__social .header__social__contacts address {
-  display: inline-block;
+.header__social-contacts_life::before {
+  background: url("../img/phones.png");
+  content: '';
+  display: block;
+  float: left;
+  background-size: cover;
+  width: 12px;
+  height: 12px;
+  background-position: 0px 0;
+  margin: 0 1px;
+}
+/* line 148, ../sass/screen.scss */
+.header__social-contacts_life h5 {
   float: right;
 }
-/* line 145, ../sass/screen.scss */
-.header__social .header__social__fb {
-  background: url("./img/social.png");
-  width: 40px;
-  height: 40px;
-  background-position: 0px 0px;
+
+/* line 150, ../sass/screen.scss */
+.header__social-contacts_mts::before {
+  background: url("../img/phones.png");
+  content: '';
+  display: block;
+  float: left;
+  background-size: cover;
+  width: 12px;
+  height: 12px;
+  background-position: 12px 0;
+  margin: 0 1px;
 }
-/* line 146, ../sass/screen.scss */
-.header__social .header__social__yt {
-  background: url("./img/social.png");
-  background-position: 0px 0px;
+/* line 154, ../sass/screen.scss */
+.header__social-contacts_mts h5 {
+  float: left;
 }
-/* line 147, ../sass/screen.scss */
-.header__social .header__social__in {
-  background: url("./img/social.png");
-  background-position: 0px 0px;
+
+/* line 156, ../sass/screen.scss */
+.header__social {
+  padding: 0;
+}
+/* line 157, ../sass/screen.scss */
+.header__social .header__social__contacts address {
+  display: inline-block;
+  float: left;
+  font-size: 0.8rem;
+  text-align: center;
+  width: auto;
+}
+/* line 158, ../sass/screen.scss */
+.header__social .header__social-fb {
+  background: url("../img/social.png");
+  background-position: -10px 0px;
+  display: block;
+}
+/* line 159, ../sass/screen.scss */
+.header__social .header__social-yt {
+  background: url("../img/social.png");
+  background-position: -61px 0px;
+  display: block;
+}
+/* line 160, ../sass/screen.scss */
+.header__social .header__social-in {
+  background: url("../img/social.png");
+  background-position: -162px 0px;
+  display: block;
 }
 
 /* 2.3 end header style */
@@ -667,50 +718,59 @@ hr.main__hr {
 /*end sidebar*/
 /*tablet resolution*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* line 159, ../sass/screen.scss */
+  /* line 173, ../sass/screen.scss */
   [class*="grid-responsive__column__col-"] {
     padding: 0 10px;
+  }
+
+  /* line 174, ../sass/screen.scss */
+  .header__social__contacts address {
+    display: inline-block;
+    float: left;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 100%;
   }
 }
 /*mobile device column grid and height*/
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 163, ../sass/screen.scss */
+  /* line 178, ../sass/screen.scss */
   .grid-responsive {
     width: 100%;
     margin: auto;
   }
 
   /*width of the main container*/
-  /* line 164, ../sass/screen.scss */
+  /* line 179, ../sass/screen.scss */
   [class*="grid-responsive__column__col-"] {
     padding: 0 6.4px;
     width: 100%;
   }
 
-  /* line 165, ../sass/screen.scss */
+  /* line 180, ../sass/screen.scss */
   .sidebar-main_menu__link__active {
     width: 100%;
   }
 }
 /*maim menu*/
-/* line 168, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 .sidebar-main__menu {
   background: #666666;
 }
 
-/* line 170, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .sidebar-main_menu__link {
   display: block;
   padding: 20px;
   background: #e1e1e1;
   border-bottom: 1px solid grey;
 }
-/* line 171, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .sidebar-main_menu__link a {
   text-decoration: none;
 }
 
-/* line 172, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 .sidebar-main_menu__link__active {
   background: #bbd0e1;
   color: blue;
@@ -718,7 +778,7 @@ hr.main__hr {
   border-right-width: 20px;
   border-left-width: 20px;
 }
-/* line 174, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 .sidebar-main_menu__link__active::before {
   content: '';
   border-left: 22px solid #b8d2e0;
@@ -730,7 +790,7 @@ hr.main__hr {
   top: 0;
   margin-top: -20px;
 }
-/* line 183, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .sidebar-main_menu__link__active::after {
   content: '';
   border-radius: 50%;
@@ -742,18 +802,18 @@ hr.main__hr {
 }
 
 /*7 Footer*/
-/* line 189, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 .footer {
   background: #2c425a;
   width: 100%;
 }
 
-/* line 190, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 main, aside {
   float: left;
 }
 
-/* line 191, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 .prefooter {
   width: 100%;
   background: #bbd0e1;
