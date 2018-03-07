@@ -3,7 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /*table of context/
-1. Mixins and functions
+1. Mixins and functions !
 --1.1 Css reset
 --1.2 Cleafix
 --1.3 fonts
@@ -14,8 +14,8 @@
 --1.8 sticky footer
 --1.9 minor setup for main blocks
 2. Responsive grid
---2.1 Media queries mixins and functions
---2.2 Container, columns, rows and sections, amin and aside and footer main styles
+--2.1 Media queries mixins ands functions
+--2.2 Container, columns, rows and sections, main and aside and footer main styles
 --2.3 Header styles
 --2.3.1 header__logo
 --2.3.1 header__social
@@ -48,11 +48,12 @@
 /* --1.1 end clearfix*/
 /* --1.2 fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+/*used  Verdana, Arial */
 /* --1.2 end fonts */
 /*--1.3 colors */
 $basefont: rgb(0,0,0);
 $linkcolor: rgb(44,66,90);
-$basedarkblue:rgb(44,66,90);
+$basedarkblue:rgb(8, 31, 68);
 $lightblue:rgb(187, 208, 225);
 $greycolor:rgb(142, 147, 153);
 $darkshadow:rgb(102, 102, 102);
@@ -84,38 +85,63 @@ $index:nth($typography, $i );
 $fontsize:nth($fontsizes, $i);
 /*extra large*/
 @media screen and (min-width:#{$desktop}px)  {
-#{$index}{font-size:#{$fontsize}px;font-weight:100;font-family:"Roboto";}
+#mobile{display:none;}//hide mobile button on large screens
+#{$index}{font-size:#{$fontsize}px;font-weight:100;font-family: Verdana, Arial;}
+.header__social .header__social__contacts{
+  width: 260px;
 }
-/*desktop*/
+}
+/*480 breakpoint will be set in further releases*/
+/*desktop laptop and */
 @media screen and (min-width:#{$tablet}px) and (max-width: #{desktop}px)  {
-#{$index}{font-size:#{$fontsize}px;font-weight:100;font-family:"Roboto";}
+
+    #mobile{display:none;}//hide mobile button on large screens
+#{$index}{font-size:#{$fontsize}px;font-weight:100;font-family: Verdana, Arial;}
+.header__social .header__social__contacts{
+  width: 260px;
 }
-/*tablets*/
+}
+/*tablets and mobile landscape */
 @media screen and (min-width:#{$mobile}px) and (max-width:#{$desktop}px)   {
-#{$index}{font-size:#{$fontsize * $tablet / $desktop}px;font-weight:100;font-family:"Roboto";}
+
+#mobile{display:none;}
+#{$index}{font-size:#{$fontsize * $tablet / $desktop}px;font-weight:100;font-family: Verdana, Arial;}
+.header__social__contacts{
+  width: 130px;
+  margin: auto;
 }
-/*mobile*/
+}
+/*mobile portrait*/
 @media screen and (max-width:#{$mobile}px){
-#{$index}{font-size:#{$fontsize * $mobile / $tablet}px;font-weight:100;font-family:"Roboto";}
+
+#{$index}{font-size:#{$fontsize * $mobile / $tablet}px;font-weight:100;font-family: Verdana, Arial;}
 }
-/*mobile*/
-@media screen and (max-width:#{$mobile}px){
-#{$index}{font-size:#{$fontsize * $mobile / $tablet}px;font-weight:100;font-family:"Roboto";}
-}
+
 }
 
 img{max-width:100%;height:100%;}
-/*end responsive typography*/
+/*article trip block*/
+.article__img{padding:5px;}
+.article__trip{margin:10px 0;}
+.article__title{font-size:18px;color:#{$basedarkblue};font-weight: 800;}
+.article__title date{margin:20px 20px;}
+/*end article trip*/
+/*end typography*/
 /*--1.9 minor setup for main blocks*/
 *{box-sizing: border-box;}
+html,body{overflow-x: hidden;font-family: 'Roboto', sans-serif;}
+p, strong,em,h1,h2,h3,h4,h5,h6{font-family: 'Roboto', sans-serif;}
 #root main,#root aside,#root header{display:inline-block;box-sizing: border-box;padding: 0;}
-
-a{color:#{$linkcolor}; text-decoration:none;};
-a:hover{color:#{$basedarkblue}; text-decoration:none;};
-img, .sidebar-main__banner__img__responsive{max-width:100%;height:100%;}
+/*link color*/
+a{color:#{$basedarkblue}; text-decoration:none;font-weight: 300;
+&:hover{color:blue;text-decoration:underline;}}
+#main{padding-left:10px;}
+img, .img__responsive{max-width:100%;height:auto;}
 aside{padding-right: 0;}
 /*-- end 1.9 minor setup for main blocks*/
 /*2. Responsive grid*/
+/*--2.2Container, columns, rows and sections, main and aside and footer main styles --*/
+
 .grid-responsive{display:block;margin:auto;max-width:1040px;width:auto;-webkit-box-shadow: 5px 0px 1px 0px #{$basedarkblue};
 -moz-box-shadow:    5px 0px 0px 0px #{$basedarkblue};
 box-shadow:         5px 0px 0px 0px #{$basedarkblue};
@@ -134,55 +160,225 @@ $c:1;
 /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
 @media screen and (min-width:1024px){
 .grid-responsive__column{padding:0 10px;}
+.grid-responsive .grid-responsive__row{padding-right:10px;}
 }
+
+/*end --2.2 Container, columns, rows and sections, main and aside and footer main styles*/
 /* 2.3 header style */
-.header__social-network{display:inline-block;width:40px;height:40px;float:right;margin:0 5px;}
+header{margin:10px 0 0;}
+.header{
+.header__slogan{text-transform:uppercase;
+h1{font-weight:900;letter-spacing: 3px;color:#{$basedarkblue};margin-top:20px;}
+h3{font-weight: 100;letter-spacing: 3px;color:#{$basedarkblue};margin-top: 15px};
+}
+.header__social-network{display:inline-block;width:40px;height:40px;float:right;margin:0 5px;background-size:auto 100%;border-radius:30%;border:1px solid rgb(255,255,255);
+  &:hover{border:1px solid #{$basedarkblue};}
+}
+.header__social-networks{width:200px;display:block;margin:auto;padding-top:20px;float:left}
 header{height:auto;width:auto;}
-hr.main__hr{height:8px;background:#{$basedarkblue};margin-top: 0px;}
 /*--2.3.1 header__logo*/
+.header__logo{
+.header__logo-img{margin: auto;
+    display: inline-block;
+    height: 100px;
+    min-width: 100px;
+  }
+}
+.header__social__contacts{margin-bottom:-42px;display:inline-block;}
 .header__social-contacts_life{
 &::before{background: url("../img/phones.png");content:'';display:block;float:left;background-size: cover;
 width: 12px;
 height: 12px;
-background-position: 0px 0;margin: 0 1px;}
+background-position: 12px 0;margin: 2px 1px 7px 0;}
 & h5{float:right;}}
 .header__social-contacts_mts {
 &::before{background: url("../img/phones.png");content:'';display:block;float:left;background-size: cover;
 width: 12px;
 height: 12px;
-background-position: 12px 0;margin: 0 1px;}
+background-position: 0px 0;margin: 2px 1px 7px 0;}
+& h5{float:left;}
+}
+.header__social-contacts_star {
+&::before{    background: url(../img/phones.png);
+    content: '';
+    display: block;
+    float: left;
+    background-size: cover;
+    width: 11px;
+    height: 12px;
+    background-position: 46.6px 0;
+    margin: 0 1px;}
 & h5{float:left;}
 }
 .header__social{padding:0;
-.header__social__contacts address{display:inline-block;float:left;font-size:0.8rem;text-align:center;width:auto;}
-.header__social-fb{background: url("../img/social.png");background-position: -10px 0px;display:block;}
-.header__social-yt{background: url("../img/social.png");background-position: -61px 0px;display:block;}
-.header__social-in{background: url("../img/social.png");background-position: -162px 0px;display:block;}
+
+.header__social__contacts address{display:inline-block;float:left;text-align:center;width:auto;
+& a{margin:0px 2px;font-size:0.8rem;}
 }
 
+}
+}
+.header__social-fb{background: url("../img/fb.png");display:block;background-size:contain;
+}
+.header__social-yt{background: url("../img/yt.png");display:block;background-size:contain;
+}
+.header__social-in{background: url("../img/in.png");display:block;background-size:contain;
+}
+.header__social-vb{background: url("../img/vb.png");display:block;background-size:contain;
+}
+.mobile{display:block;width:100%;  }
+.header .header__slogan {font-size: 1.2rem;font-style: italic}
+.header .header__slogan *{text-align :center;width:100%;text-transform: none;}
+/*-- end 2.3.1 header__logo*/
+/*2.4 Single block style*/
+.button__square-more{
+  display: block;
+  margin: auto;
+  width: auto;
+  background: transparent;
+  outline: none;
+  border: 5px solid #081f44;
+  color: #081f44;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  margin: 60px auto 0 auto;
+&::hover{
+border: #{$lightblue};
+color: #{$lightblue};
+}}
+/*2.4 end Single block style*/
 /* 2.3 end header style */
+hr.main__hr{height:8px;background:#{$basedarkblue};margin-top: 0px;border:0;margin-right: 10px;}
+/*3. 3.Aside styles*/
+/*--3.1 Aside elements*/
+.sidebar-main__banner{background:transparent;}
+.sidebar-main__banner__img{padding-top:20px; }
 
-
-
-
-/*3. Sidebar styles*/
-
+/*--3.2 Aside colors and blocks*/
+/*--4.1 Menu styles*/
+.social-network{display:inline-block;width:40px;height:40px;float:right;margin:0 5px;background-size:auto 100%;border-radius:30%;border:1px solid #{$greycolor};}
+#main_menu.fixed{position:fixed;top:0;margin:0}
+#main_menu .social-networks{display:none;}
+#main_menu>.mobile_hidden{display:none}
+/*--end  Menu styles*/
+#root aside{float:right}
+#main_menu>li.mobile_link{display:none;}
 /*end sidebar*/
 /*tablet resolution*/
-@media screen and (min-width:768px) and (max-width:1024px){
+@media screen and (min-width:768px) and (max-width:1112px){
+
+  .header__social__contacts{
+    width: 160px;
+    margin: auto;
+  }
+.sidebar-main__banner{display:none;}
 [class*="grid-responsive__column__col-"]{padding:0 10px;}
+.grid-responsive .grid-responsive__row{padding-right:10px;}
 .header__social__contacts address{display:inline-block;float:left;font-size:0.8rem;text-align:center;width:100%;}
 }
 /*mobile device column grid and height*/
-@media screen and (min-width:0px) and (max-width:768px){
+[id]>.link-hidden{display:none;}
+@media screen and (min-width:0px) and (max-width:768px){/*hidden and visible adaptive settings*/
+#aside  #main_menu .social-networks{display:inline-block;}
+#aside > #main_menu > .mobile_hidden >.social-networks{display:inline-block;}
+#aside > #main_menu > .mobile_hidden >.social-networks > .social-network{width:30px;height:30px;}
+#aside #main_menu .mobile_link{display:inline-block;}
+#root>#footer{position:relative;right:0;bottom:0;}
+/*hide main header on mobile*/
+#root main, #root aside, #root header{display:none;}
+/*end hide main header*/
+#root aside{width:50%;display:block;z-index: 9;}
+#root main{width:100%;display:block;z-index: 8;}
+#root aside #main_menu{width:50%;display:block;right:0;float:left;position:absolute;top:0;margin-top:30px;}
+.header .header__logo .header__logo-img{height: 60px;
+min-width: 60px;}
+[id]>.header__logo-img{diplsay:block;height:60px;}
+  #aside .sidebar-main__menu  {display:block;width: 100%;margin-top: 0px;}
+#aside #main_menu>.sidebar-main_menu__link__active::before{display:none!important;}
+#aside #main_menu>.sidebar-main_menu__link{width:100%;}
+#aside #main_menu>.sidebar-main_menu__link{padding:10px;}
+#aside #main_menu{padding-right:0;}
+
+#mobile{outline: none;
+  position:absolute;
+  top:5px;
+  right:5px;
+    border: none;
+    background: none;
+    content: '&#9776';
+    display:inline-block;
+    background: white;
+    width: auto;float:right;
+    padding-left:20px;
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none; }/*mobile active*/
+#aside .mobile{display: inline-block;
+text-align: center;
+position: fixed;
+-webkit-backface-visibility: hidden;
+z-index: 99;
+background: #fff;
+top: 0;}
+
+
+/*mobile menu @media queries for menu class*/
+.mobile_link-img{height:30px;padding:5px;}
+.mobile_link{position:fixed;left:0;width:100%;top:0;text-align:left;}
+[id][id]>.link-hidden{display:block;}
+.mobile_link-slogan>*{float:left}
+.mobile_link-slogan{width:80%;margin-top:5px;}
+.mobile_link-slogan>h1{
+  font-size: 0.8rem;font-style:italic;font-weight: 900;
+    letter-spacing: 3px;
+    color: #081f44;
+}
+.mobile_link-slogan>h4{font-size:0.6rem;font-style:italic;}
+.link-hidden>*{float:left;}
+[id][class*="mobile-hidden"]>.sidebar-main_menu__link{display:none;width:auto;}
+[id].mobile-hidden .sidebar-main_menu__link {display:none;}
+[class*="mobile-hidden"]{display:none;}/*modificator hidden*/
+.mobile_link>.grid-responsive__row{background:white;width:100%;}
+/*mobile  hide*/
+
+header .header__logo{width:15%;}
+  .header__social>.grid-responsive__row{border-top:10px solid #081f44}
+  .header__social__contacts{
+    width: 180px;
+    margin: auto;
+  }
+  .sidebar-main__banner{display:none;}
+    .header.header__logo{padding-top:10px;}
+  .header .header__slogan{width:80%;padding:0;font-style:italic;}
+
+.sidebar-main__banner{display:none;}/*hide banner on mobile*/
+.header__logo{width:20%;}
+
+
+
+.header__slogan{text-align: center;}
 .grid-responsive{width:100%;margin:auto}/*width of the main container*/
 [class*="grid-responsive__column__col-"]{padding:0 6.4px;width:100%}
+.grid-responsive .grid-responsive__row{padding:0 6.4px;}
+aside{float:right;}
 .sidebar-main_menu__link__active{width:100%;}
+
+/*hide top-menu slogan*/
+/*hide top-menu slogan*/
+
+
+/*end top-menu slogan*/
 }
-/*maim menu*/
-.sidebar-main__menu{
-background:#{$darkshadow}};
-.sidebar-main_menu__link{display:block;padding:20px;background:#e1e1e1;border-bottom: 1px solid grey;
+
+/* 3.1 main menu*/
+.sidebar-main_menu__link.link-hidden>.header_logo-img{height:60px;}
+
+.link-hidden{text-align:center;float:left;}
+.sidebar-main__menu{z-index:90;margin-top:19px;
+background:transparent};
+.sidebar-main_menu__link{display:block;padding:20px;background:#e1e1e1;border-bottom: 1px solid grey;border-bottom-right-radius: 6px;border-bottom-left-radius: 6px;
 & a{text-decoration:none;}}
 .sidebar-main_menu__link__active{
 background:#{$lightblue};color:blue;width:120%;border-right-width: 20px;border-left-width: 20px;
@@ -200,6 +396,59 @@ border-radius:50%;width:10px;height:10px;background:white;margin:3px;
 float: right;
 }
 }
+.sidebar-main__menu  {display:block;width: 246px;}
+/*end main menu*/
+/*6. Slider*/
+.slider{display:inline-block};
+
+.slide__showing{
+    opacity: 1;
+    z-index: 2;
+}
+#slides{
+position: relative;
+height:224px;
+margin-bottom:20px;
+padding: 0px;
+margin: 0px;
+list-style-type: none;
+}
+
+.slide{
+z-index:-1;
+position: absolute;
+left: 0px;
+height:254px;
+width:100%;
+paddding-bottom:10px;
+top: 0px;
+opacity: 0;
+z-index: 1;
+-webkit-transition: opacity 1s;
+-moz-transition: opacity 1s;
+-o-transition: opacity 1s;
+transition: opacity 1s;
+}
+.slide__mask, .sidebar-main_banner__mask{
+  padding: 0 20px 20px 10px;
+    width: 30%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    z-index:1;
+    transform: translateY(-90px);
+    color: white;
+h5,h6{position:absolute;line-height: 10px;}}
+.slide__showing{
+opacity: 1;
+z-index: 2;
+}
+
+#slides img{
+display:inline-block;
+width:100%;
+max-height:230px
+}
+/* end Slider*/
 /*7 Footer*/
 .footer{background:#{$basedarkblue};width:100%;}
 main,aside{float:left;}

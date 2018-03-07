@@ -3,7 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /*table of context/
-1. Mixins and functions
+1. Mixins and functions !
 --1.1 Css reset
 --1.2 Cleafix
 --1.3 fonts
@@ -14,8 +14,8 @@
 --1.8 sticky footer
 --1.9 minor setup for main blocks
 2. Responsive grid
---2.1 Media queries mixins and functions
---2.2 Container, columns, rows and sections, amin and aside and footer main styles
+--2.1 Media queries mixins ands functions
+--2.2 Container, columns, rows and sections, main and aside and footer main styles
 --2.3 Header styles
 --2.3.1 header__logo
 --2.3.1 header__social
@@ -110,6 +110,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* 1.2 clearfix and sticky-footer*/
 /* --1.1 end clearfix*/
 /* --1.2 fonts */
+/*used  Verdana, Arial */
 /* --1.2 end fonts */
 /*--1.3 colors */
 /*--1.4 end-colors*/
@@ -146,472 +147,675 @@ $large:5000;/*extra large*/
 /*predifines based on Opera default sizes*/
 /*extra large*/
 @media screen and (min-width: 1200px) {
-  /* line 87, ../sass/screen.scss */
+  /* line 88, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 89, ../sass/screen.scss */
   h1 {
     font-size: 32px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 90, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*desktop*/
+/*480 breakpoint will be set in further releases*/
+/*desktop laptop and */
 @media screen and (min-width: 1112px) and (max-width: desktoppx) {
-  /* line 91, ../sass/screen.scss */
+  /* line 98, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 99, ../sass/screen.scss */
   h1 {
     font-size: 32px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 100, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*tablets*/
+/*tablets and mobile landscape */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 95, ../sass/screen.scss */
+  /* line 107, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 108, ../sass/screen.scss */
   h1 {
     font-size: 29.65333px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 109, ../sass/screen.scss */
+  .header__social__contacts {
+    width: 130px;
+    margin: auto;
   }
 }
-/*mobile*/
+/*mobile portrait*/
 @media screen and (max-width: 768px) {
-  /* line 99, ../sass/screen.scss */
+  /* line 117, ../sass/screen.scss */
   h1 {
     font-size: 22.10072px;
     font-weight: 100;
-    font-family: "Roboto";
-  }
-}
-/*mobile*/
-@media screen and (max-width: 768px) {
-  /* line 103, ../sass/screen.scss */
-  h1 {
-    font-size: 22.10072px;
-    font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
   }
 }
 /*extra large*/
 @media screen and (min-width: 1200px) {
-  /* line 87, ../sass/screen.scss */
+  /* line 88, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 89, ../sass/screen.scss */
   h2 {
     font-size: 24px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 90, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*desktop*/
+/*480 breakpoint will be set in further releases*/
+/*desktop laptop and */
 @media screen and (min-width: 1112px) and (max-width: desktoppx) {
-  /* line 91, ../sass/screen.scss */
+  /* line 98, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 99, ../sass/screen.scss */
   h2 {
     font-size: 24px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 100, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*tablets*/
+/*tablets and mobile landscape */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 95, ../sass/screen.scss */
+  /* line 107, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 108, ../sass/screen.scss */
   h2 {
     font-size: 22.24px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 109, ../sass/screen.scss */
+  .header__social__contacts {
+    width: 130px;
+    margin: auto;
   }
 }
-/*mobile*/
+/*mobile portrait*/
 @media screen and (max-width: 768px) {
-  /* line 99, ../sass/screen.scss */
+  /* line 117, ../sass/screen.scss */
   h2 {
     font-size: 16.57554px;
     font-weight: 100;
-    font-family: "Roboto";
-  }
-}
-/*mobile*/
-@media screen and (max-width: 768px) {
-  /* line 103, ../sass/screen.scss */
-  h2 {
-    font-size: 16.57554px;
-    font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
   }
 }
 /*extra large*/
 @media screen and (min-width: 1200px) {
-  /* line 87, ../sass/screen.scss */
+  /* line 88, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 89, ../sass/screen.scss */
   h3 {
     font-size: 18.72px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 90, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*desktop*/
+/*480 breakpoint will be set in further releases*/
+/*desktop laptop and */
 @media screen and (min-width: 1112px) and (max-width: desktoppx) {
-  /* line 91, ../sass/screen.scss */
+  /* line 98, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 99, ../sass/screen.scss */
   h3 {
     font-size: 18.72px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 100, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*tablets*/
+/*tablets and mobile landscape */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 95, ../sass/screen.scss */
+  /* line 107, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 108, ../sass/screen.scss */
   h3 {
     font-size: 17.3472px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 109, ../sass/screen.scss */
+  .header__social__contacts {
+    width: 130px;
+    margin: auto;
   }
 }
-/*mobile*/
+/*mobile portrait*/
 @media screen and (max-width: 768px) {
-  /* line 99, ../sass/screen.scss */
+  /* line 117, ../sass/screen.scss */
   h3 {
     font-size: 12.92892px;
     font-weight: 100;
-    font-family: "Roboto";
-  }
-}
-/*mobile*/
-@media screen and (max-width: 768px) {
-  /* line 103, ../sass/screen.scss */
-  h3 {
-    font-size: 12.92892px;
-    font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
   }
 }
 /*extra large*/
 @media screen and (min-width: 1200px) {
-  /* line 87, ../sass/screen.scss */
+  /* line 88, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 89, ../sass/screen.scss */
   h4 {
     font-size: 16px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 90, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*desktop*/
+/*480 breakpoint will be set in further releases*/
+/*desktop laptop and */
 @media screen and (min-width: 1112px) and (max-width: desktoppx) {
-  /* line 91, ../sass/screen.scss */
+  /* line 98, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 99, ../sass/screen.scss */
   h4 {
     font-size: 16px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 100, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*tablets*/
+/*tablets and mobile landscape */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 95, ../sass/screen.scss */
+  /* line 107, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 108, ../sass/screen.scss */
   h4 {
     font-size: 14.82667px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 109, ../sass/screen.scss */
+  .header__social__contacts {
+    width: 130px;
+    margin: auto;
   }
 }
-/*mobile*/
+/*mobile portrait*/
 @media screen and (max-width: 768px) {
-  /* line 99, ../sass/screen.scss */
+  /* line 117, ../sass/screen.scss */
   h4 {
     font-size: 11.05036px;
     font-weight: 100;
-    font-family: "Roboto";
-  }
-}
-/*mobile*/
-@media screen and (max-width: 768px) {
-  /* line 103, ../sass/screen.scss */
-  h4 {
-    font-size: 11.05036px;
-    font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
   }
 }
 /*extra large*/
 @media screen and (min-width: 1200px) {
-  /* line 87, ../sass/screen.scss */
+  /* line 88, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 89, ../sass/screen.scss */
   h5 {
     font-size: 13.28px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 90, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*desktop*/
+/*480 breakpoint will be set in further releases*/
+/*desktop laptop and */
 @media screen and (min-width: 1112px) and (max-width: desktoppx) {
-  /* line 91, ../sass/screen.scss */
+  /* line 98, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 99, ../sass/screen.scss */
   h5 {
     font-size: 13.28px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 100, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*tablets*/
+/*tablets and mobile landscape */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 95, ../sass/screen.scss */
+  /* line 107, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 108, ../sass/screen.scss */
   h5 {
     font-size: 12.30613px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 109, ../sass/screen.scss */
+  .header__social__contacts {
+    width: 130px;
+    margin: auto;
   }
 }
-/*mobile*/
+/*mobile portrait*/
 @media screen and (max-width: 768px) {
-  /* line 99, ../sass/screen.scss */
+  /* line 117, ../sass/screen.scss */
   h5 {
     font-size: 9.1718px;
     font-weight: 100;
-    font-family: "Roboto";
-  }
-}
-/*mobile*/
-@media screen and (max-width: 768px) {
-  /* line 103, ../sass/screen.scss */
-  h5 {
-    font-size: 9.1718px;
-    font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
   }
 }
 /*extra large*/
 @media screen and (min-width: 1200px) {
-  /* line 87, ../sass/screen.scss */
+  /* line 88, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 89, ../sass/screen.scss */
   h6 {
     font-size: 10.72px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 90, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*desktop*/
+/*480 breakpoint will be set in further releases*/
+/*desktop laptop and */
 @media screen and (min-width: 1112px) and (max-width: desktoppx) {
-  /* line 91, ../sass/screen.scss */
+  /* line 98, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 99, ../sass/screen.scss */
   h6 {
     font-size: 10.72px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 100, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*tablets*/
+/*tablets and mobile landscape */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 95, ../sass/screen.scss */
+  /* line 107, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 108, ../sass/screen.scss */
   h6 {
     font-size: 9.93387px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 109, ../sass/screen.scss */
+  .header__social__contacts {
+    width: 130px;
+    margin: auto;
   }
 }
-/*mobile*/
+/*mobile portrait*/
 @media screen and (max-width: 768px) {
-  /* line 99, ../sass/screen.scss */
+  /* line 117, ../sass/screen.scss */
   h6 {
     font-size: 7.40374px;
     font-weight: 100;
-    font-family: "Roboto";
-  }
-}
-/*mobile*/
-@media screen and (max-width: 768px) {
-  /* line 103, ../sass/screen.scss */
-  h6 {
-    font-size: 7.40374px;
-    font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
   }
 }
 /*extra large*/
 @media screen and (min-width: 1200px) {
-  /* line 87, ../sass/screen.scss */
+  /* line 88, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 89, ../sass/screen.scss */
   p {
     font-size: 16px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 90, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*desktop*/
+/*480 breakpoint will be set in further releases*/
+/*desktop laptop and */
 @media screen and (min-width: 1112px) and (max-width: desktoppx) {
-  /* line 91, ../sass/screen.scss */
+  /* line 98, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 99, ../sass/screen.scss */
   p {
     font-size: 16px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 100, ../sass/screen.scss */
+  .header__social .header__social__contacts {
+    width: 260px;
   }
 }
-/*tablets*/
+/*tablets and mobile landscape */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 95, ../sass/screen.scss */
+  /* line 107, ../sass/screen.scss */
+  #mobile {
+    display: none;
+  }
+
+  /* line 108, ../sass/screen.scss */
   p {
     font-size: 14.82667px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
+  }
+
+  /* line 109, ../sass/screen.scss */
+  .header__social__contacts {
+    width: 130px;
+    margin: auto;
   }
 }
-/*mobile*/
+/*mobile portrait*/
 @media screen and (max-width: 768px) {
-  /* line 99, ../sass/screen.scss */
+  /* line 117, ../sass/screen.scss */
   p {
     font-size: 11.05036px;
     font-weight: 100;
-    font-family: "Roboto";
+    font-family: Verdana, Arial;
   }
 }
-/*mobile*/
-@media screen and (max-width: 768px) {
-  /* line 103, ../sass/screen.scss */
-  p {
-    font-size: 11.05036px;
-    font-weight: 100;
-    font-family: "Roboto";
-  }
-}
-/* line 107, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 img {
   max-width: 100%;
   height: 100%;
 }
 
-/*end responsive typography*/
+/*article trip block*/
+/* line 124, ../sass/screen.scss */
+.article__img {
+  padding: 5px;
+}
+
+/* line 125, ../sass/screen.scss */
+.article__trip {
+  margin: 10px 0;
+}
+
+/* line 126, ../sass/screen.scss */
+.article__title {
+  font-size: 18px;
+  color: #081f44;
+  font-weight: 800;
+}
+
+/* line 127, ../sass/screen.scss */
+.article__title date {
+  margin: 20px 20px;
+}
+
+/*end article trip*/
+/*end typography*/
 /*--1.9 minor setup for main blocks*/
-/* line 110, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
+html, body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 133, ../sass/screen.scss */
+p, strong, em, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 134, ../sass/screen.scss */
 #root main, #root aside, #root header {
   display: inline-block;
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 113, ../sass/screen.scss */
+/*link color*/
+/* line 136, ../sass/screen.scss */
 a {
-  color: #2c425a;
+  color: #081f44;
   text-decoration: none;
+  font-weight: 300;
 }
-
-/* line 114, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 a:hover {
-  color: #2c425a;
-  text-decoration: none;
+  color: blue;
+  text-decoration: underline;
 }
 
-/* line 115, ../sass/screen.scss */
-img, .sidebar-main__banner__img__responsive {
+/* line 138, ../sass/screen.scss */
+#main {
+  padding-left: 10px;
+}
+
+/* line 139, ../sass/screen.scss */
+img, .img__responsive {
   max-width: 100%;
-  height: 100%;
+  height: auto;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 aside {
   padding-right: 0;
 }
 
 /*-- end 1.9 minor setup for main blocks*/
 /*2. Responsive grid*/
-/* line 119, ../sass/screen.scss */
+/*--2.2Container, columns, rows and sections, main and aside and footer main styles --*/
+/* line 145, ../sass/screen.scss */
 .grid-responsive {
   display: block;
   margin: auto;
   max-width: 1040px;
   width: auto;
-  -webkit-box-shadow: 5px 0px 1px 0px #2c425a;
-  -moz-box-shadow: 5px 0px 0px 0px #2c425a;
-  box-shadow: 5px 0px 0px 0px #2c425a;
+  -webkit-box-shadow: 5px 0px 1px 0px #081f44;
+  -moz-box-shadow: 5px 0px 0px 0px #081f44;
+  box-shadow: 5px 0px 0px 0px #081f44;
 }
-/* line 122, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 .grid-responsive .grid-responsive__container {
   display: inline-block;
 }
-/* line 123, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .grid-responsive .grid-responsive::after {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 124, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 .grid-responsive .grid-responsive__row {
   width: 100%;
   display: inline-block;
 }
-/* line 125, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .grid-responsive .grid-responsive__column {
   display: inline-block;
   float: left;
   min-height: 1px;
 }
-/* line 126, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 .grid-responsive .grid-responsive__column::before, .grid-responsive .grid-responsive__row::before {
   overflow: hidden;
   *zoom: 1;
   clear: both;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-1 {
   width: calc(100% * 1 / 13);
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-2 {
   width: calc(100% * 2 / 13);
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-3 {
   width: calc(100% * 3 / 13);
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-4 {
   width: calc(100% * 4 / 13);
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-5 {
   width: calc(100% * 5 / 13);
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-6 {
   width: calc(100% * 6 / 13);
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-7 {
   width: calc(100% * 7 / 13);
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-8 {
   width: calc(100% * 8 / 13);
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-9 {
   width: calc(100% * 9 / 13);
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-10 {
   width: calc(100% * 10 / 13);
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-11 {
   width: calc(100% * 11 / 13);
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-12 {
   width: calc(100% * 12 / 13);
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .grid-responsive__column__col-13 {
   width: calc(100% * 13 / 13);
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 [class*="grid-responsive__column__col-"] {
   float: left;
 }
 
-/* line 133, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 [class*="grid-responsive__column__col-"] ::after {
   overflow: hidden;
   *zoom: 1;
@@ -619,54 +823,87 @@ aside {
 
 /*block that acts like row and like block and have the height value nad width value insted of inline that have only block value*/
 @media screen and (min-width: 1024px) {
-  /* line 136, ../sass/screen.scss */
+  /* line 162, ../sass/screen.scss */
   .grid-responsive__column {
     padding: 0 10px;
   }
+
+  /* line 163, ../sass/screen.scss */
+  .grid-responsive .grid-responsive__row {
+    padding-right: 10px;
+  }
 }
+/*end --2.2 Container, columns, rows and sections, main and aside and footer main styles*/
 /* 2.3 header style */
-/* line 139, ../sass/screen.scss */
-.header__social-network {
+/* line 168, ../sass/screen.scss */
+header {
+  margin: 10px 0 0;
+}
+
+/* line 169, ../sass/screen.scss */
+.header {
+  /*--2.3.1 header__logo*/
+}
+/* line 170, ../sass/screen.scss */
+.header .header__slogan {
+  text-transform: uppercase;
+}
+/* line 171, ../sass/screen.scss */
+.header .header__slogan h1 {
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #081f44;
+  margin-top: 20px;
+}
+/* line 172, ../sass/screen.scss */
+.header .header__slogan h3 {
+  font-weight: 100;
+  letter-spacing: 3px;
+  color: #081f44;
+  margin-top: 15px;
+}
+/* line 174, ../sass/screen.scss */
+.header .header__social-network {
   display: inline-block;
   width: 40px;
   height: 40px;
   float: right;
   margin: 0 5px;
+  background-size: auto 100%;
+  border-radius: 30%;
+  border: 1px solid white;
 }
-
-/* line 140, ../sass/screen.scss */
-header {
+/* line 175, ../sass/screen.scss */
+.header .header__social-network:hover {
+  border: 1px solid #081f44;
+}
+/* line 177, ../sass/screen.scss */
+.header .header__social-networks {
+  width: 200px;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+  float: left;
+}
+/* line 178, ../sass/screen.scss */
+.header header {
   height: auto;
   width: auto;
 }
-
-/* line 141, ../sass/screen.scss */
-hr.main__hr {
-  height: 8px;
-  background: #2c425a;
-  margin-top: 0px;
+/* line 181, ../sass/screen.scss */
+.header .header__logo .header__logo-img {
+  margin: auto;
+  display: inline-block;
+  height: 100px;
+  min-width: 100px;
 }
-
-/*--2.3.1 header__logo*/
-/* line 144, ../sass/screen.scss */
-.header__social-contacts_life::before {
-  background: url("../img/phones.png");
-  content: '';
-  display: block;
-  float: left;
-  background-size: cover;
-  width: 12px;
-  height: 12px;
-  background-position: 0px 0;
-  margin: 0 1px;
+/* line 187, ../sass/screen.scss */
+.header .header__social__contacts {
+  margin-bottom: -42px;
+  display: inline-block;
 }
-/* line 148, ../sass/screen.scss */
-.header__social-contacts_life h5 {
-  float: right;
-}
-
-/* line 150, ../sass/screen.scss */
-.header__social-contacts_mts::before {
+/* line 189, ../sass/screen.scss */
+.header .header__social-contacts_life::before {
   background: url("../img/phones.png");
   content: '';
   display: block;
@@ -675,55 +912,221 @@ hr.main__hr {
   width: 12px;
   height: 12px;
   background-position: 12px 0;
+  margin: 2px 1px 7px 0;
+}
+/* line 193, ../sass/screen.scss */
+.header .header__social-contacts_life h5 {
+  float: right;
+}
+/* line 195, ../sass/screen.scss */
+.header .header__social-contacts_mts::before {
+  background: url("../img/phones.png");
+  content: '';
+  display: block;
+  float: left;
+  background-size: cover;
+  width: 12px;
+  height: 12px;
+  background-position: 0px 0;
+  margin: 2px 1px 7px 0;
+}
+/* line 199, ../sass/screen.scss */
+.header .header__social-contacts_mts h5 {
+  float: left;
+}
+/* line 202, ../sass/screen.scss */
+.header .header__social-contacts_star::before {
+  background: url(../img/phones.png);
+  content: '';
+  display: block;
+  float: left;
+  background-size: cover;
+  width: 11px;
+  height: 12px;
+  background-position: 46.6px 0;
   margin: 0 1px;
 }
-/* line 154, ../sass/screen.scss */
-.header__social-contacts_mts h5 {
+/* line 211, ../sass/screen.scss */
+.header .header__social-contacts_star h5 {
   float: left;
 }
-
-/* line 156, ../sass/screen.scss */
-.header__social {
+/* line 213, ../sass/screen.scss */
+.header .header__social {
   padding: 0;
 }
-/* line 157, ../sass/screen.scss */
-.header__social .header__social__contacts address {
+/* line 215, ../sass/screen.scss */
+.header .header__social .header__social__contacts address {
   display: inline-block;
   float: left;
-  font-size: 0.8rem;
   text-align: center;
   width: auto;
 }
-/* line 158, ../sass/screen.scss */
-.header__social .header__social-fb {
-  background: url("../img/social.png");
-  background-position: -10px 0px;
-  display: block;
-}
-/* line 159, ../sass/screen.scss */
-.header__social .header__social-yt {
-  background: url("../img/social.png");
-  background-position: -61px 0px;
-  display: block;
-}
-/* line 160, ../sass/screen.scss */
-.header__social .header__social-in {
-  background: url("../img/social.png");
-  background-position: -162px 0px;
-  display: block;
+/* line 216, ../sass/screen.scss */
+.header .header__social .header__social__contacts address a {
+  margin: 0px 2px;
+  font-size: 0.8rem;
 }
 
+/* line 221, ../sass/screen.scss */
+.header__social-fb {
+  background: url("../img/fb.png");
+  display: block;
+  background-size: contain;
+}
+
+/* line 223, ../sass/screen.scss */
+.header__social-yt {
+  background: url("../img/yt.png");
+  display: block;
+  background-size: contain;
+}
+
+/* line 225, ../sass/screen.scss */
+.header__social-in {
+  background: url("../img/in.png");
+  display: block;
+  background-size: contain;
+}
+
+/* line 227, ../sass/screen.scss */
+.header__social-vb {
+  background: url("../img/vb.png");
+  display: block;
+  background-size: contain;
+}
+
+/* line 229, ../sass/screen.scss */
+.mobile {
+  display: block;
+  width: 100%;
+}
+
+/* line 230, ../sass/screen.scss */
+.header .header__slogan {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* line 231, ../sass/screen.scss */
+.header .header__slogan * {
+  text-align: center;
+  width: 100%;
+  text-transform: none;
+}
+
+/*-- end 2.3.1 header__logo*/
+/*2.4 Single block style*/
+/* line 234, ../sass/screen.scss */
+.button__square-more {
+  display: block;
+  margin: auto;
+  width: auto;
+  background: transparent;
+  outline: none;
+  border: 5px solid #081f44;
+  color: #081f44;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  margin: 60px auto 0 auto;
+}
+/* line 247, ../sass/screen.scss */
+.button__square-more::hover {
+  border: #bbd0e1;
+  color: #bbd0e1;
+}
+
+/*2.4 end Single block style*/
 /* 2.3 end header style */
-/*3. Sidebar styles*/
+/* line 253, ../sass/screen.scss */
+hr.main__hr {
+  height: 8px;
+  background: #081f44;
+  margin-top: 0px;
+  border: 0;
+  margin-right: 10px;
+}
+
+/*3. 3.Aside styles*/
+/*--3.1 Aside elements*/
+/* line 256, ../sass/screen.scss */
+.sidebar-main__banner {
+  background: transparent;
+}
+
+/* line 257, ../sass/screen.scss */
+.sidebar-main__banner__img {
+  padding-top: 20px;
+}
+
+/*--3.2 Aside colors and blocks*/
+/*--4.1 Menu styles*/
+/* line 261, ../sass/screen.scss */
+.social-network {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin: 0 5px;
+  background-size: auto 100%;
+  border-radius: 30%;
+  border: 1px solid #8e9399;
+}
+
+/* line 262, ../sass/screen.scss */
+#main_menu.fixed {
+  position: fixed;
+  top: 0;
+  margin: 0;
+}
+
+/* line 263, ../sass/screen.scss */
+#main_menu .social-networks {
+  display: none;
+}
+
+/* line 264, ../sass/screen.scss */
+#main_menu > .mobile_hidden {
+  display: none;
+}
+
+/*--end  Menu styles*/
+/* line 266, ../sass/screen.scss */
+#root aside {
+  float: right;
+}
+
+/* line 267, ../sass/screen.scss */
+#main_menu > li.mobile_link {
+  display: none;
+}
+
 /*end sidebar*/
 /*tablet resolution*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* line 173, ../sass/screen.scss */
+@media screen and (min-width: 768px) and (max-width: 1112px) {
+  /* line 272, ../sass/screen.scss */
+  .header__social__contacts {
+    width: 160px;
+    margin: auto;
+  }
+
+  /* line 276, ../sass/screen.scss */
+  .sidebar-main__banner {
+    display: none;
+  }
+
+  /* line 277, ../sass/screen.scss */
   [class*="grid-responsive__column__col-"] {
     padding: 0 10px;
   }
 
-  /* line 174, ../sass/screen.scss */
+  /* line 278, ../sass/screen.scss */
+  .grid-responsive .grid-responsive__row {
+    padding-right: 10px;
+  }
+
+  /* line 279, ../sass/screen.scss */
   .header__social__contacts address {
     display: inline-block;
     float: left;
@@ -733,44 +1136,334 @@ hr.main__hr {
   }
 }
 /*mobile device column grid and height*/
+/* line 282, ../sass/screen.scss */
+[id] > .link-hidden {
+  display: none;
+}
+
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 178, ../sass/screen.scss */
+  /*hidden and visible adaptive settings*/
+  /* line 284, ../sass/screen.scss */
+  #aside #main_menu .social-networks {
+    display: inline-block;
+  }
+
+  /* line 285, ../sass/screen.scss */
+  #aside > #main_menu > .mobile_hidden > .social-networks {
+    display: inline-block;
+  }
+
+  /* line 286, ../sass/screen.scss */
+  #aside > #main_menu > .mobile_hidden > .social-networks > .social-network {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* line 287, ../sass/screen.scss */
+  #aside #main_menu .mobile_link {
+    display: inline-block;
+  }
+
+  /* line 288, ../sass/screen.scss */
+  #root > #footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+  }
+
+  /*hide main header on mobile*/
+  /* line 290, ../sass/screen.scss */
+  #root main, #root aside, #root header {
+    display: none;
+  }
+
+  /*end hide main header*/
+  /* line 292, ../sass/screen.scss */
+  #root aside {
+    width: 50%;
+    display: block;
+    z-index: 9;
+  }
+
+  /* line 293, ../sass/screen.scss */
+  #root main {
+    width: 100%;
+    display: block;
+    z-index: 8;
+  }
+
+  /* line 294, ../sass/screen.scss */
+  #root aside #main_menu {
+    width: 50%;
+    display: block;
+    right: 0;
+    float: left;
+    position: absolute;
+    top: 0;
+    margin-top: 30px;
+  }
+
+  /* line 295, ../sass/screen.scss */
+  .header .header__logo .header__logo-img {
+    height: 60px;
+    min-width: 60px;
+  }
+
+  /* line 297, ../sass/screen.scss */
+  [id] > .header__logo-img {
+    diplsay: block;
+    height: 60px;
+  }
+
+  /* line 298, ../sass/screen.scss */
+  #aside .sidebar-main__menu {
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  /* line 299, ../sass/screen.scss */
+  #aside #main_menu > .sidebar-main_menu__link__active::before {
+    display: none !important;
+  }
+
+  /* line 300, ../sass/screen.scss */
+  #aside #main_menu > .sidebar-main_menu__link {
+    width: 100%;
+  }
+
+  /* line 301, ../sass/screen.scss */
+  #aside #main_menu > .sidebar-main_menu__link {
+    padding: 10px;
+  }
+
+  /* line 302, ../sass/screen.scss */
+  #aside #main_menu {
+    padding-right: 0;
+  }
+
+  /* line 304, ../sass/screen.scss */
+  #mobile {
+    outline: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background: none;
+    content: '&#9776';
+    display: inline-block;
+    background: white;
+    width: auto;
+    float: right;
+    padding-left: 20px;
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none;
+  }
+
+  /*mobile active*/
+  /* line 318, ../sass/screen.scss */
+  #aside .mobile {
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    -webkit-backface-visibility: hidden;
+    z-index: 99;
+    background: #fff;
+    top: 0;
+  }
+
+  /*mobile menu @media queries for menu class*/
+  /* line 328, ../sass/screen.scss */
+  .mobile_link-img {
+    height: 30px;
+    padding: 5px;
+  }
+
+  /* line 329, ../sass/screen.scss */
+  .mobile_link {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+    text-align: left;
+  }
+
+  /* line 330, ../sass/screen.scss */
+  [id][id] > .link-hidden {
+    display: block;
+  }
+
+  /* line 331, ../sass/screen.scss */
+  .mobile_link-slogan > * {
+    float: left;
+  }
+
+  /* line 332, ../sass/screen.scss */
+  .mobile_link-slogan {
+    width: 80%;
+    margin-top: 5px;
+  }
+
+  /* line 333, ../sass/screen.scss */
+  .mobile_link-slogan > h1 {
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #081f44;
+  }
+
+  /* line 338, ../sass/screen.scss */
+  .mobile_link-slogan > h4 {
+    font-size: 0.6rem;
+    font-style: italic;
+  }
+
+  /* line 339, ../sass/screen.scss */
+  .link-hidden > * {
+    float: left;
+  }
+
+  /* line 340, ../sass/screen.scss */
+  [id][class*="mobile-hidden"] > .sidebar-main_menu__link {
+    display: none;
+    width: auto;
+  }
+
+  /* line 341, ../sass/screen.scss */
+  [id].mobile-hidden .sidebar-main_menu__link {
+    display: none;
+  }
+
+  /* line 342, ../sass/screen.scss */
+  [class*="mobile-hidden"] {
+    display: none;
+  }
+
+  /*modificator hidden*/
+  /* line 343, ../sass/screen.scss */
+  .mobile_link > .grid-responsive__row {
+    background: white;
+    width: 100%;
+  }
+
+  /*mobile  hide*/
+  /* line 346, ../sass/screen.scss */
+  header .header__logo {
+    width: 15%;
+  }
+
+  /* line 347, ../sass/screen.scss */
+  .header__social > .grid-responsive__row {
+    border-top: 10px solid #081f44;
+  }
+
+  /* line 348, ../sass/screen.scss */
+  .header__social__contacts {
+    width: 180px;
+    margin: auto;
+  }
+
+  /* line 352, ../sass/screen.scss */
+  .sidebar-main__banner {
+    display: none;
+  }
+
+  /* line 353, ../sass/screen.scss */
+  .header.header__logo {
+    padding-top: 10px;
+  }
+
+  /* line 354, ../sass/screen.scss */
+  .header .header__slogan {
+    width: 80%;
+    padding: 0;
+    font-style: italic;
+  }
+
+  /* line 356, ../sass/screen.scss */
+  .sidebar-main__banner {
+    display: none;
+  }
+
+  /*hide banner on mobile*/
+  /* line 357, ../sass/screen.scss */
+  .header__logo {
+    width: 20%;
+  }
+
+  /* line 361, ../sass/screen.scss */
+  .header__slogan {
+    text-align: center;
+  }
+
+  /* line 362, ../sass/screen.scss */
   .grid-responsive {
     width: 100%;
     margin: auto;
   }
 
   /*width of the main container*/
-  /* line 179, ../sass/screen.scss */
+  /* line 363, ../sass/screen.scss */
   [class*="grid-responsive__column__col-"] {
     padding: 0 6.4px;
     width: 100%;
   }
 
-  /* line 180, ../sass/screen.scss */
+  /* line 364, ../sass/screen.scss */
+  .grid-responsive .grid-responsive__row {
+    padding: 0 6.4px;
+  }
+
+  /* line 365, ../sass/screen.scss */
+  aside {
+    float: right;
+  }
+
+  /* line 366, ../sass/screen.scss */
   .sidebar-main_menu__link__active {
     width: 100%;
   }
+
+  /*hide top-menu slogan*/
+  /*hide top-menu slogan*/
+  /*end top-menu slogan*/
 }
-/*maim menu*/
-/* line 183, ../sass/screen.scss */
-.sidebar-main__menu {
-  background: #666666;
+/* 3.1 main menu*/
+/* line 376, ../sass/screen.scss */
+.sidebar-main_menu__link.link-hidden > .header_logo-img {
+  height: 60px;
 }
 
-/* line 185, ../sass/screen.scss */
+/* line 378, ../sass/screen.scss */
+.link-hidden {
+  text-align: center;
+  float: left;
+}
+
+/* line 379, ../sass/screen.scss */
+.sidebar-main__menu {
+  z-index: 90;
+  margin-top: 19px;
+  background: transparent;
+}
+
+/* line 381, ../sass/screen.scss */
 .sidebar-main_menu__link {
   display: block;
   padding: 20px;
   background: #e1e1e1;
   border-bottom: 1px solid grey;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
-/* line 186, ../sass/screen.scss */
+/* line 382, ../sass/screen.scss */
 .sidebar-main_menu__link a {
   text-decoration: none;
 }
 
-/* line 187, ../sass/screen.scss */
+/* line 383, ../sass/screen.scss */
 .sidebar-main_menu__link__active {
   background: #bbd0e1;
   color: blue;
@@ -778,7 +1471,7 @@ hr.main__hr {
   border-right-width: 20px;
   border-left-width: 20px;
 }
-/* line 189, ../sass/screen.scss */
+/* line 385, ../sass/screen.scss */
 .sidebar-main_menu__link__active::before {
   content: '';
   border-left: 22px solid #b8d2e0;
@@ -790,7 +1483,7 @@ hr.main__hr {
   top: 0;
   margin-top: -20px;
 }
-/* line 198, ../sass/screen.scss */
+/* line 394, ../sass/screen.scss */
 .sidebar-main_menu__link__active::after {
   content: '';
   border-radius: 50%;
@@ -801,19 +1494,95 @@ hr.main__hr {
   float: right;
 }
 
+/* line 399, ../sass/screen.scss */
+.sidebar-main__menu {
+  display: block;
+  width: 246px;
+}
+
+/*end main menu*/
+/*6. Slider*/
+/* line 402, ../sass/screen.scss */
+.slider {
+  display: inline-block;
+}
+
+/* line 404, ../sass/screen.scss */
+.slide__showing {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* line 408, ../sass/screen.scss */
+#slides {
+  position: relative;
+  height: 224px;
+  margin-bottom: 20px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+/* line 417, ../sass/screen.scss */
+.slide {
+  z-index: -1;
+  position: absolute;
+  left: 0px;
+  height: 254px;
+  width: 100%;
+  paddding-bottom: 10px;
+  top: 0px;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+/* line 432, ../sass/screen.scss */
+.slide__mask, .sidebar-main_banner__mask {
+  padding: 0 20px 20px 10px;
+  width: 30%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  transform: translateY(-90px);
+  color: white;
+}
+/* line 440, ../sass/screen.scss */
+.slide__mask h5, .slide__mask h6, .sidebar-main_banner__mask h5, .sidebar-main_banner__mask h6 {
+  position: absolute;
+  line-height: 10px;
+}
+
+/* line 441, ../sass/screen.scss */
+.slide__showing {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* line 446, ../sass/screen.scss */
+#slides img {
+  display: inline-block;
+  width: 100%;
+  max-height: 230px;
+}
+
+/* end Slider*/
 /*7 Footer*/
-/* line 204, ../sass/screen.scss */
+/* line 453, ../sass/screen.scss */
 .footer {
-  background: #2c425a;
+  background: #081f44;
   width: 100%;
 }
 
-/* line 205, ../sass/screen.scss */
+/* line 454, ../sass/screen.scss */
 main, aside {
   float: left;
 }
 
-/* line 206, ../sass/screen.scss */
+/* line 455, ../sass/screen.scss */
 .prefooter {
   width: 100%;
   background: #bbd0e1;
