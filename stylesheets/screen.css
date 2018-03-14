@@ -994,6 +994,7 @@ header {
 /* line 227, ../sass/screen.scss */
 .header__social-vb {
   background: url("../img/vb.png");
+<<<<<<< HEAD
   display: block;
   background-size: contain;
 }
@@ -1010,6 +1011,24 @@ header {
   font-style: italic;
 }
 
+=======
+  display: block;
+  background-size: contain;
+}
+
+/* line 229, ../sass/screen.scss */
+.mobile {
+  display: block;
+  width: 100%;
+}
+
+/* line 230, ../sass/screen.scss */
+.header .header__slogan {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+>>>>>>> 0d9fd03deacb796d7b7bcc1789c094e5af8781de
 /* line 231, ../sass/screen.scss */
 .header .header__slogan * {
   text-align: center;
