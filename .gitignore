@@ -1,6 +1,6 @@
 #wordpress
 some.dx.am/
-
+wordpress_template
 # Logs
 logs
 *.log
@@ -11,6 +11,9 @@ npm-debug.log*
 
 # npm lock packages data
 package-lock.json
+
+#development platform
+.ftpconfig
 
 # nyc test coverage
 .nyc_output
