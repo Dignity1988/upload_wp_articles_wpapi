@@ -34,11 +34,7 @@
           </div>
         </div>
       </header>
-
       <aside id="aside" class="sidebar grid-responsive__column grid-responsive__column__col-3">
-
-
-
         <ul id="main_menu" class="sidebar-main__menu">
           <li class="sidebar-main__menu_mobile mobile_link">
             <div class="grid-responsive__row">
@@ -62,18 +58,17 @@
             <div class="sidebar-main_banner__mask">
               <strong>
 TV show
-</strong>
+      </strong>
               <p>some info</p>
             </div>
           </div>
         </ul>
-
       </aside>
       <main id="main" class="main grid-responsive__column grid-responsive__column__col-10">
         <hr class="main__hr">
         <section class="grid-responsive__row main__slider">
           <ul class "slider slider__slides" id="slides">
-            <li class="slide slide__showing"><img class="slide_img img__responsive" src="./img/1.jpg" alt="">
+            <li class="slide "><img class="slide_img img__responsive" src="./img/1.jpg" alt="">
               <div class="slide__mask mask-text">
                 <h6>text to show<br>text excerept</h6></div>
             </li>
@@ -92,7 +87,6 @@ TV show
           </ul>
         </section>
         <section class="grid-responsive__row article__trip">
-
           <div class="grid-responsive__column__col-7"><img class="article__img  img_responsive" src="./img/1.jpg"></div>
           <div class="grid-responsive__column__col-6">
             <h6 class="article__title"><date>12/09/2018</date><span class="article__title article__title-meta">Кавказ 2000км</span>
@@ -123,7 +117,6 @@ TV show
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit eveniet dignissimos fugiat ducimus veniam optio beatae ratione ab, quis commodi, dolorem suscipit officiis alias architecto consectetur, sequi totam. Recusandae, accusantium.</p>
         </section>
       </main>
-
     </div>
     <div id="helper_footer"></div>
   </div>
@@ -209,7 +202,21 @@ TV show
 <script>
   document.getElementById("mobile").addEventListener('click', function mobile() {
     var icon = document.querySelector('#main_menu');
+    var menus = document.querySelectorAll('sidebar-main_menu__link');
     icon.classList.toggle('mobile-hidden');
+    pos = 1000;
+    var id = setInterval(frame, 10);
+
+    function frame() {
+      if (pos == 1000) {
+        clearInterval(id);
+      } else {
+        pos++;
+
+        menus.style.left = pos + 'px';
+      }
+    }
+
   })
 </script>
 <!--end mobile menu-->

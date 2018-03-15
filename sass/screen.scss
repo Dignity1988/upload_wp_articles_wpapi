@@ -1,4 +1,4 @@
-/* Welcome to Compass.
+/* Welcome to modified via webpack css
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
@@ -186,20 +186,20 @@ header{height:auto;width:auto;}
 }
 .header__social__contacts{margin-bottom:-42px;display:inline-block;}
 .header__social-contacts_life{
-&::before{background: url("../img/phones.png");content:'';display:block;float:left;background-size: cover;
+&::before{background: url("./img/phones.png");content:'';display:block;float:left;background-size: cover;
 width: 12px;
 height: 12px;
 background-position: 12px 0;margin: 2px 1px 7px 0;}
 & h5{float:right;}}
 .header__social-contacts_mts {
-&::before{background: url("../img/phones.png");content:'';display:block;float:left;background-size: cover;
+&::before{background: url("./img/phones.png");content:'';display:block;float:left;background-size: cover;
 width: 12px;
 height: 12px;
 background-position: 0px 0;margin: 2px 1px 7px 0;}
 & h5{float:left;}
 }
 .header__social-contacts_star {
-&::before{    background: url(../img/phones.png);
+&::before{    background: url('./img/phones.png');
     content: '';
     display: block;
     float: left;
@@ -218,13 +218,13 @@ background-position: 0px 0;margin: 2px 1px 7px 0;}
 
 }
 }
-.header__social-fb{background: url("../img/fb.png");display:block;background-size:contain;
+.header__social-fb{background: url("./img/fb.png");display:block;background-size:contain;
 }
-.header__social-yt{background: url("../img/yt.png");display:block;background-size:contain;
+.header__social-yt{background: url("./img/yt.png");display:block;background-size:contain;
 }
-.header__social-in{background: url("../img/in.png");display:block;background-size:contain;
+.header__social-in{background: url("./img/in.png");display:block;background-size:contain;
 }
-.header__social-vb{background: url("../img/vb.png");display:block;background-size:contain;
+.header__social-vb{background: url("./img/vb.png");display:block;background-size:contain;
 }
 .mobile{display:block;width:100%;  }
 .header .header__slogan {font-size: 1.2rem;font-style: italic}
