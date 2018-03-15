@@ -9,7 +9,7 @@ get_footer();
 <!DOCTYPE html>
 <html lang="en">
 
- 
+  
 
 <body>
   <div class="grid-responsive" id="root">
