@@ -9,8 +9,8 @@ npm-debug.log*
 
 # Runtime data
 
-
-
+# npm lock packages data
+package-lock.json
 
 # nyc test coverage
 .nyc_output
