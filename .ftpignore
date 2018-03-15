@@ -1,0 +1,8 @@
+.ftpconfig
+.ftpignore
+/node_modules
+/img
+/.git
+/js
+/stylesheets
+.git
