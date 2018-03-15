@@ -1,4 +1,4 @@
-#wordpress files
+
 some.dx.am/
 
 # Logs
@@ -51,3 +51,7 @@ typings/
 
 # dotenv environment variables file
 .env
+<<<<<<< HEAD
+=======
+
+>>>>>>> e883de68671bb93ead545e6380c9ea6b5a11112c
