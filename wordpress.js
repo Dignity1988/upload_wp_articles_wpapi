@@ -3,7 +3,7 @@
 
     var WPAPI = require("wpapi");
     var site = new WPAPI({
-      endpoint: 'http://new.whiteraven.org.ua/wp-json/wp/v2/trip',
+      endpoint: 'httpsite',
       username: 'Maksym',
       password: '_'
     });
