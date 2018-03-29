@@ -55,8 +55,8 @@ var moveFrom = __dirname+"/gallery/slider/";//setting up directory for file uplo
                       var WPAPI = require("wpapi");
                       var wp= new WPAPI({
                         endpoint: 'http://new.whiteraven.org.ua/wp-json/',
-                        username: 'Maksym',
-                        password: 'YfCDaWIC^ZQ$#NX3RAAeL6Lt'
+                        username: '_',
+                        password: '_6Lt'
                       });
                       wp.posts().create({
                         title: filename,
