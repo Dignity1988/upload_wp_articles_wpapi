@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var PARSE = require('article-parser');
-let url = 'http://whiteraven.org.ua/page.php?95';
+let url = 'http://whiteraven.org.ua/page.php?24';
 PARSE.extract(url).then((article) => {
   var fs = require('fs');
   var path = require('path');
@@ -48,7 +48,7 @@ PARSE.extract(url).then((article) => {
             var site = new WPAPI({
               endpoint: 'http://new.whiteraven.org.ua/wp-json/',
               username: 'Maksym',
-              password: 'YfCDaWIC^ZQ$#NX3RAAeL6Lt'
+              password: 'zfjbm*j0S7s)S1K!'
             });
             console.log("'%s' is a file.", moveFrom + file);
             var fullpath = moveFrom + file;
@@ -57,7 +57,7 @@ PARSE.extract(url).then((article) => {
             var wp = new WPAPI({
               endpoint: 'http://new.whiteraven.org.ua/wp-json/',
               username: 'Maksym',
-              password: 'YfCDaWIC^ZQ$#NX3RAAeL6Lt'
+              password: 'zfjbm*j0S7s)S1K!'
             });
             wp.posts().create({
               title: filename,
