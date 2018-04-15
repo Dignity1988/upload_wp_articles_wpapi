@@ -5,6 +5,7 @@
       username: 'Maksym',
       password: 'YfCDaWIC^ZQ$#NX3RAAeL6Lt'
     });
+>>>>>>> 71cb9355a522fb77055cc9abbbb64928ade52679
 
 var moveFrom = __dirname+"/gallery/slider/";
 var fs = require( 'fs' );
@@ -37,7 +38,8 @@ var moveFrom = __dirname+"/gallery/slider/";//setting up directory for file uplo
                        var site = new WPAPI({
                       endpoint: 'http://new.whiteraven.org.ua/wp-json/',
                       username: 'Maksym',
-                      password: 'YfCDaWIC^ZQ$#NX3RAAeL6Lt'
+                      password: ''
+>>>>>>> 71cb9355a522fb77055cc9abbbb64928ade52679
                         });
                       console.log( "'%s' is a file.",moveFrom+file );
                       var fullpath=moveFrom+file;
@@ -46,7 +48,8 @@ var moveFrom = __dirname+"/gallery/slider/";//setting up directory for file uplo
                       var wp= new WPAPI({
                         endpoint: 'http://new.whiteraven.org.ua/wp-json/',
                         username: 'Maksym',
-                        password: 'YfCDaWIC^ZQ$#NX3RAAeL6Lt'
+                        password: ''
+>>>>>>> 71cb9355a522fb77055cc9abbbb64928ade52679
                       });
                       wp.posts().create({
                         title: filename,
