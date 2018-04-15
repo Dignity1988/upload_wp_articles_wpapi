@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 
+<<<<<<< HEAD
 /* got file structure removed - and assign varibles
 altay
 │   └── sep2002
@@ -191,6 +192,22 @@ altay
       username: 'Maksym',
       password: 'YfCDaWIC^ZQ$#NX3RAAeL6Lt'
     });
+=======
+    var WPAPI = require("wpapi");
+    var site = new WPAPI({
+      endpoint: 'httpsite',
+      username: 'Maksym',
+      password: '_'
+    });
+/*three levels of depth*/
+
+
+
+
+//var moveTo = "/home/_desktop/.raven/gallery/"
+
+ 
+>>>>>>> 3891ec1b3001f26110d9bacb6deac61244b83206
 
 var moveFrom = __dirname+"/gallery/slider/";
 var fs = require( 'fs' );
@@ -221,9 +238,15 @@ var moveFrom = __dirname+"/gallery/slider/";//setting up directory for file uplo
 
                       var WPAPI = require("wpapi");
                        var site = new WPAPI({
+<<<<<<< HEAD
                       endpoint: 'http://new.whiteraven.org.ua/wp-json/',
                       username: 'Maksym',
                       password: 'YfCDaWIC^ZQ$#NX3RAAeL6Lt'
+=======
+                      endpoint: 'site/wp-json/',
+                      username: '_',
+                      password: '_'
+>>>>>>> 3891ec1b3001f26110d9bacb6deac61244b83206
                         });
                       console.log( "'%s' is a file.",moveFrom+file );
                       var fullpath=moveFrom+file;
@@ -231,8 +254,13 @@ var moveFrom = __dirname+"/gallery/slider/";//setting up directory for file uplo
                       var WPAPI = require("wpapi");
                       var wp= new WPAPI({
                         endpoint: 'http://new.whiteraven.org.ua/wp-json/',
+<<<<<<< HEAD
                         username: 'Maksym',
                         password: 'YfCDaWIC^ZQ$#NX3RAAeL6Lt'
+=======
+                        username: '_',
+                        password: '_6Lt'
+>>>>>>> 3891ec1b3001f26110d9bacb6deac61244b83206
                       });
                       wp.posts().create({
                         title: filename,
