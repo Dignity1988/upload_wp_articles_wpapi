@@ -1,9 +1,21 @@
+(function() {
+  jQuery(".overlay").click(function(){
+  jQuery( "#form" ).hide( "fast" );
+  jQuery( ".overlay" ).hide( "fast" );
+  jQuery( "#main_menu" ).removeClass( "mobile-hidden" );
+  });
+var  i=document.getElementById("mobile");
+var  y=document.getElementById("main");
+var m = document.getElementById("main_menu");
+m.addEventListener("load", function(){
 var m = document.getElementById("main_menu");
 var k = document.getElementById("header");
     var z = document.querySelector(".mobile_link");
     s = k.offsetHeight + z.offsetHeight;
 m.style.top = s + 'px';
-(function() {window.addEventListener('scroll', function() {
+
+});
+window.addEventListener('scroll', function() {
   var m = document.getElementById("main_menu");
   var k = document.getElementById("header");
 
@@ -20,11 +32,19 @@ m.style.top = s + 'px';
     m.classList.remove('fixed');m.style.top = s + 'px'
   }
 }, true);
-var  i=document.getElementById("mobile");
-if (i){i.addEventListener('click', function mobile() {
+if (y){y.addEventListener('click', function mobile() {
   var icon = document.querySelector('#main_menu');
-  icon.classList.toggle('mobile-hidden');
+  icon.classList.remove('mobile-hidden');
 
+});
+}
+
+if (i){i.addEventListener('click', function mobile() {
+var icon = document.querySelector('#main_menu');
+
+if (window.matchMedia=("(min-width: 768px)")){ jQuery( ".overlay" ).fadeToggle( "fast" ); }
+
+icon.classList.toggle('mobile-hidden');
 });
 }}
 ());

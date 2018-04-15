@@ -1,5 +1,11 @@
 #wordpress
 texts/
+jsprojectfiles/
+uploads/
+uploads_receiveed/
+gallery/
+dest/
+css/
 
 # Logs
 logs

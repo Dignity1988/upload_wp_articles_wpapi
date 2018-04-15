@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 var PARSE = require('article-parser');
-let url = 'http://whiteraven.org.ua/page.php?24';
+let url = 'http://whiteraven.org.ua/page.php?39';
 PARSE.extract(url).then((article) => {
   var fs = require('fs');
   var path = require('path');
   // In newer Node.js versions where process is already global this isn't necessary.
   var process = require("process");
-  text = new Array([article['content']], [article['title']]);
+  text = new Array([article], [article['title']]);
   console.log(text);
   var i = 0;
   var b = text[i + 1];
@@ -47,8 +47,8 @@ PARSE.extract(url).then((article) => {
             var WPAPI = require("wpapi");
             var site = new WPAPI({
               endpoint: 'http://new.whiteraven.org.ua/wp-json/',
-              username: 'Maksym',
-              password: 'zfjbm*j0S7s)S1K!'
+              username: 'temp-access',
+              password: 'koTxv@el$U5url)!'
             });
             console.log("'%s' is a file.", moveFrom + file);
             var fullpath = moveFrom + file;
@@ -56,8 +56,8 @@ PARSE.extract(url).then((article) => {
             var WPAPI = require("wpapi");
             var wp = new WPAPI({
               endpoint: 'http://new.whiteraven.org.ua/wp-json/',
-              username: 'Maksym',
-              password: 'zfjbm*j0S7s)S1K!'
+              username: 'temp-access',
+              password: 'koTxv@el$U5url)!'
             });
             wp.posts().create({
               title: filename,

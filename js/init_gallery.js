@@ -1,7 +1,7 @@
-jQuery(function($) {
- $('.lightboxgallery-gallery-item').click(function(event) {
+jQuery(document).ready(function() {
+ jQuery(document).on('click', '.lightboxgallery-gallery-item', '.lightboxgallery-gallery-item', function(event) {
     event.preventDefault();
-    $(this).lightboxgallery({
+    jQuery(this).lightboxgallery({
       showCounter: true,
       showTitle: true,
       showDescription: true
