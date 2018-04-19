@@ -1,5 +1,6 @@
 #wordpress
 texts/
+<<<<<<< HEAD
 jsprojectfiles/
 uploads/
 uploads_receiveed/
@@ -7,6 +8,9 @@ gallery/
 dest/
 css/
 
+=======
+wordpress_template
+>>>>>>> fc06b135642b4a72d8291b5b4d2c45a1d58a08f8
 # Logs
 logs
 *.log
