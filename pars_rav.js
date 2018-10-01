@@ -57,8 +57,8 @@ console.log(image);
             var WPAPI = require("wpapi");
             var site = new WPAPI({
               endpoint: '77.235.42.165/~vetezdemo/wp-json/',
-              username: 'vetezdemo',
-              password: '@Oe95mPjTN2R'
+              username: '',
+              password: ''
             });
             console.log("'%s' is a file.", moveFrom + file);
             var fullpath = moveFrom + file;
