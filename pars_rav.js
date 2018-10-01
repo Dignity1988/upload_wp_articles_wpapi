@@ -65,9 +65,9 @@ console.log(image);
             var filename = file.replace('', ''); //specifying the fullpath to the text on node server or in file system.
             var WPAPI = require("wpapi");
             var wp = new WPAPI({
-              endpoint: '77.235.42.165/~vetezdemo/wp-json/',
-              username: 'vetezdemo',
-              password: '@Oe95mPjTN2R'
+              endpoint: '/wp-json/',
+              username: '',
+              password: ''
             });
             wp.posts().create({
               title: filename,
