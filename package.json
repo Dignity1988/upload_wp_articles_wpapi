@@ -2,17 +2,13 @@
   "name": "raven",
   "version": "1.0.0",
   "description": "JS_uploader_WP_API",
-  "main": "./pars_v.js",
-  "scripts": {
-    "test": "echo \"npm is runnig free\" && exit 1",
-    "parse": "./pars_rav.js",
-  },
+  "main": "main",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dignity1988/raven.git"
   },
   "keywords": [
-    "raven"
+    "test_wp_article_uploader"
   ],
   "author": "Dignity1988",
   "license": "MIT",
@@ -28,6 +24,5 @@
     "wordpress-rest-api": "^0.8.0",
     "wpapi": "^1.1.2"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
