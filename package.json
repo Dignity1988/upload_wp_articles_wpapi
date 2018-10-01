@@ -1,16 +1,11 @@
 {
   "name": "raven",
   "version": "1.0.0",
-  "description": "whiteravenwebsite",
-  "main": "webpack.config.js",
+  "description": "JS_uploader_WP_API",
+  "main": "./pars_v.js",
   "scripts": {
-    "start": "webpack --mode development --config webpack.config.js",
-    "wordpress": "./wordpress.js",
-    "send": "webpack --mode development -p --config webpack.config.js",
     "test": "echo \"npm is runnig free\" && exit 1",
-    "parse": "./article_parser.js",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "parse": "./pars_rav.js",
   },
   "repository": {
     "type": "git",
@@ -22,36 +17,17 @@
   "author": "Dignity1988",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dignity1988/raven/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/Dignity1988/raven#readme",
+  "homepage": "",
   "dependencies": {
     "article-parser": "^2.3.5",
     "cli": "^1.0.1",
-    "grunt": "^1.0.2",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-imagemin": "^2.0.1",
-    "loadash": "^1.0.0",
-    "lodash": "^4.17.5",
     "raw-loader": "^0.5.1",
     "url-loader": "^1.0.1",
-    "webpack-cli": "^2.0.14",
-    "webpack-dev-server": "^3.1.3",
     "wordpress-rest-api": "^0.8.0",
     "wpapi": "^1.1.2"
   },
   "devDependencies": {
-    "css-loader": "^0.28.11",
-    "extract-text-webpack-plugin": "^2.1.2",
-    "file-loader": "^1.1.11",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-cssmin": "^2.2.1",
-    "grunt-contrib-uglify": "^3.3.0",
-    "img-loader": "^2.0.1",
-    "node-sass": "^4.8.3",
-    "node-sass-loader": "^0.1.7",
-    "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.3",
-    "webpack": "^4.6.0"
   }
 }
